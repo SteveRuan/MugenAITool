@@ -10,13 +10,13 @@ namespace MugenAITool
     class AtkStorageManager
     {
         // Variables
-        public string defName = "", cmdName = "", airName = "", rl, dirRelativePath;
-        public List<string> stNames = new List<string>();
-        public List<int> stateNos = new List<int>();
-        public List<int> animNos = new List<int>();
-        public Dictionary<int, List<int>> stateData = new Dictionary<int, List<int>>();     // Move distance and Anims
-        public Dictionary<int, List<int>> animData = new Dictionary<int, List<int>>();      // Atk distance X, Y and time
-        public StreamReader readFile;
+        private string defName = "", cmdName = "", airName = "", rl, dirRelativePath;
+        private List<string> stNames = new List<string>();                                  // List of names of state files mentioned in def file
+        private List<int> stateNos = new List<int>();                                       // List of state numbers from cmd file
+        private List<int> animNos = new List<int>();                                        // List of anim numbers from cns file
+        private Dictionary<int, List<int>> stateData = new Dictionary<int, List<int>>();    // Move distance and Anims
+        private Dictionary<int, List<int>> animData = new Dictionary<int, List<int>>();     // Atk distance X, Y and time
+        private StreamReader readFile;
 
         public AtkStorageManager(string fileName)
         {
@@ -25,7 +25,17 @@ namespace MugenAITool
         }
 
         // Read def file to look for related cmd, st and air file
-        public void ReadDef()
+        public void AtkStorageMake()
+        {
+            ReadDef();
+            ReadCmd();
+            // ReadSt();
+            // ReadAir();
+            // CreateCsvFile();
+        }
+
+        // Read def file to look for related cmd, st and air file
+        private void ReadDef()
         {
             readFile = new StreamReader(defName);
             for (rl = readFile.ReadLine(); rl != null; rl = readFile.ReadLine())
@@ -45,7 +55,7 @@ namespace MugenAITool
 
 
         //Read cmd file to find out all atk states
-        public void ReadCmd()
+        private void ReadCmd()
         {
             // Variables
             int getValue = -1;
@@ -94,7 +104,7 @@ namespace MugenAITool
         }
 
         // Read st file to find out related anim and movement for atk states
-        public void Readst()
+        private void Readst()
         {
             foreach (string stName in stNames)
             {

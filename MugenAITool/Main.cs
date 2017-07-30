@@ -18,7 +18,7 @@ namespace MugenAITool
             InitializeComponent();
         }
 
-        private void replace()
+        private void RH_Replace()
         {
             RH_T2.Text = RH_T1.Text;
             if (RH_X1.Text.Length > 0 && RH_V1.Text.Length > 0) RH_T2.Text = RH_T2.Text.Replace(RH_X1.Text, RH_V1.Text);
@@ -30,7 +30,7 @@ namespace MugenAITool
 
         private void RH_B1_Click(object sender, EventArgs e)
         {
-            replace();
+            RH_Replace();
         }
         
         private void RH_B2_Click(object sender, EventArgs e)
@@ -47,11 +47,8 @@ namespace MugenAITool
         private void AS_B1_Click(object sender, EventArgs e)
         {
             AtkStorageManager ASM = new AtkStorageManager(AS_T1.Text);
-            ASM.ReadDef();
-            ASM.ReadCmd();
-            // ASM.ReadSt();
-            // ASM.ReadAir();
-            // ASM.CreateCsvFile();
+            ASM.AtkStorageMake();
         }
+
     }
 }
