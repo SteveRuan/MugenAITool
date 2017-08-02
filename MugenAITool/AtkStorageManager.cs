@@ -10,13 +10,13 @@ namespace MugenAITool
     class AtkStorageManager
     {
         // Variables
-        public string defName = "", cmdName = "", airName = "", rl, dirRelativePath;
-        public List<string> stNames = new List<string>();
-        public List<int> stateNos = new List<int>();
-        public List<int> animNos = new List<int>();
-        public Dictionary<int, List<int>> stateData = new Dictionary<int, List<int>>();     // Move distance and Anims
-        public Dictionary<int, List<int>> animData = new Dictionary<int, List<int>>();      // Atk distance X, Y and time
-        public StreamReader readFile;
+        private string defName = "", cmdName = "", airName = "", rl, dirRelativePath;
+        private List<string> stNames = new List<string>();                                  // List of names of state files mentioned in def file
+        private List<int> stateNos = new List<int>();                                       // List of state numbers from cmd file
+        // private List<int> animNos = new List<int>();                                     // List of anim numbers from cns file
+        private Dictionary<int, List<int>> stateDatas = new Dictionary<int, List<int>>();   // Move distance and Anims
+        private Dictionary<int, List<int>> animDatas = new Dictionary<int, List<int>>();    // Atk anim number, distance X, Y and time
+        private StreamReader readFile;
 
         public AtkStorageManager(string fileName)
         {
@@ -25,7 +25,17 @@ namespace MugenAITool
         }
 
         // Read def file to look for related cmd, st and air file
-        public void ReadDef()
+        public void AtkStorageMake()
+        {
+            ReadDef();
+            ReadCmd();
+            ReadSt();
+            // ReadAir();
+            // CreateCsvFile();
+        }
+
+        // Read def file to look for related cmd, st and air file
+        private void ReadDef()
         {
             readFile = new StreamReader(defName);
             for (rl = readFile.ReadLine(); rl != null; rl = readFile.ReadLine())
@@ -45,7 +55,7 @@ namespace MugenAITool
 
 
         //Read cmd file to find out all atk states
-        public void ReadCmd()
+        private void ReadCmd()
         {
             // Variables
             int getValue = -1;
@@ -55,7 +65,7 @@ namespace MugenAITool
             for (rl = readFile.ReadLine(); rl != null; rl = readFile.ReadLine())
             {
                 if (rl.IndexOf(';') >= 0) rl = rl.Substring(0, rl.IndexOf(';')).Trim();     // Remove comments
-                if (rl.IndexOf('[') >= 0 && rl.Equals("[Statedef -1]")) break;              // Find [Statedef -1] and stop
+                if (rl.IndexOf('[') >= 0 && rl.Equals("[Statedef -1]", StringComparison.CurrentCultureIgnoreCase)) break;              // Find [Statedef -1] and stop
             }
             
             // Search for all atk stateNos
@@ -94,7 +104,7 @@ namespace MugenAITool
         }
 
         // Read st file to find out related anim and movement for atk states
-        public void Readst()
+        private void ReadSt()
         {
             foreach (string stName in stNames)
             {
@@ -104,10 +114,32 @@ namespace MugenAITool
                 readFile = new StreamReader(dirRelativePath + stName);
                 for (rl = readFile.ReadLine(); rl != null; rl = readFile.ReadLine())
                 {
-                    if (rl.IndexOf(';') >= 0) rl = rl.Substring(0, rl.IndexOf(';')).Trim();     // Remove comments
-                    if (rl.IndexOf('[') >= 0 && rl.Length > 11 && rl.Substring(0, 9).Equals("[Statedef") && !rl[10].Equals('-'))   // Find [Statedef N] which N >= 0
+                    if (rl.IndexOf(';') >= 0) rl = rl.Substring(0, rl.IndexOf(';')).Trim();                 // Remove comments
+                    if (rl.IndexOf('[') >= 0 && rl.Length > 11 && rl.Substring(0, 9).Equals("[Statedef", StringComparison.CurrentCultureIgnoreCase) && !rl[10].Equals('-'))   // Find [Statedef N] which N >= 0
                     {
-
+                        int stateNo = int.Parse(rl.Substring(10, rl.Length - 11).Trim());
+                        if (stateNos.Contains(stateNo))
+                        {
+                            for (rl = readFile.ReadLine(); rl != null; rl = readFile.ReadLine())
+                            {
+                                if (rl.IndexOf(';') >= 0) rl = rl.Substring(0, rl.IndexOf(';')).Trim();         // Remove comments
+                                if (rl.Length > 4 && rl.Substring(0, 4).Equals("Anim", StringComparison.CurrentCultureIgnoreCase))
+                                {
+                                    List<int> stateData = new List<int>();
+                                    stateData.Add(0);                                                           // Add movement
+                                    try
+                                    {
+                                        stateData.Add(int.Parse(rl.Substring(rl.IndexOf('=') + 1).Trim()));     // Add anim
+                                    }
+                                    catch (Exception e)
+                                    {
+                                        stateData.Add(-1);
+                                    }
+                                    stateDatas.Add(stateNo, stateData);
+                                }
+                                if (rl.Length > 0 && rl[0] == '[') break;
+                            }
+                        }
                     }
                 }
 
@@ -117,11 +149,11 @@ namespace MugenAITool
             }
         }
 
-        /* Read air file
+        // Read air file
 
         // Combine and organize the data
 
-        // Write into target file */
+        // Write into target file
 
     }
 }
