@@ -52,7 +52,6 @@
             this.RH_X5 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.AS_T2 = new System.Windows.Forms.TextBox();
@@ -60,6 +59,7 @@
             this.AS_T1 = new System.Windows.Forms.TextBox();
             this.AS_B1 = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.label7 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -293,16 +293,6 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "AtkStorage";
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(601, 135);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(51, 25);
-            this.label7.TabIndex = 7;
-            this.label7.Text = ".csv";
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -339,7 +329,7 @@
             this.AS_B2.TabIndex = 2;
             this.AS_B2.Text = "Choose file";
             this.AS_B2.UseVisualStyleBackColor = true;
-            this.AS_B2.Click += new System.EventHandler(this.RH_B2_Click);
+            this.AS_B2.Click += new System.EventHandler(this.AS_B2_Click);
             // 
             // AS_T1
             // 
@@ -369,6 +359,16 @@
             this.tabPage3.Size = new System.Drawing.Size(752, 511);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Empty";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(601, 135);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(51, 25);
+            this.label7.TabIndex = 7;
+            this.label7.Text = ".csv";
             // 
             // Main
             // 
@@ -417,10 +417,10 @@
         private System.Windows.Forms.Button AS_B1;
         private System.Windows.Forms.TextBox AS_T2;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.Label label7;
     }
 }
 
