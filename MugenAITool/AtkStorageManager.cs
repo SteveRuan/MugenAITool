@@ -3,56 +3,84 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 
 namespace MugenAITool
 {
     class AtkStorageManager
     {
         // Variables
-        private string defName = "", cmdName = "", airName = "", rl, dirRelativePath;
+        private string charName = "", defName = "", cmdName = "", cnsName = "", airName = "", rl, charDirPath;
         private List<string> stNames = new List<string>();                                  // List of names of state files mentioned in def file
         private List<int> stateNos = new List<int>();                                       // List of state numbers from cmd file
-        // private List<int> animNos = new List<int>();                                     // List of anim numbers from cns file
-        private Dictionary<int, List<int>> stateDatas = new Dictionary<int, List<int>>();   // Move distance and Anims
-        private Dictionary<int, List<int>> animDatas = new Dictionary<int, List<int>>();    // Atk anim number, distance X, Y and time
+        private int groundFront = -1, airFront = -1;                                        // Ground.front and air.front
+        private Dictionary<int, List<int>> stateProperties = new Dictionary<int, List<int>>();          // List of state properties, such as inAir, Juggle
+        private Dictionary<int, List<int>> stateAnimDictionary = new Dictionary<int, List<int>>();      // Dictionary which match states and anims
+        private Dictionary<int, List<List<int>>> animDatas = new Dictionary<int, List<List<int>>>();    // Atk anim number, distance X, Y and time
         private StreamReader readFile;
+        private StreamWriter writeFile;
 
-        public AtkStorageManager(string fileName)
+        public AtkStorageManager(string defPath)
         {
-            defName = fileName;
-            dirRelativePath = fileName.Substring(0, fileName.LastIndexOf('\\') + 1);
+            // Global variables
+            charDirPath = defPath.Substring(0, defPath.LastIndexOf('\\') + 1);
+            defName = defPath.Substring(defPath.LastIndexOf('\\') + 1);
+            charName = defName.Substring(0, defName.LastIndexOf('.'));
         }
 
         // Read def file to look for related cmd, st and air file
         public void AtkStorageMake()
         {
             ReadDef();
+            ReadCns();
             ReadCmd();
             ReadSt();
-            // ReadAir();
-            // CreateCsvFile();
+            ReadAir();
+            CreateCsvFile();
         }
 
         // Read def file to look for related cmd, st and air file
         private void ReadDef()
         {
-            readFile = new StreamReader(defName);
+            readFile = new StreamReader(charDirPath + defName);
+
             for (rl = readFile.ReadLine(); rl != null; rl = readFile.ReadLine())
             {
-                if (rl.IndexOf(';') >= 0) rl = rl.Substring(0, rl.IndexOf(';')).Trim();     // Remove comments
-                if (rl.IndexOf('=') > 0)                                                    // File definitions
+                if (rl.Contains(';')) rl = rl.Substring(0, rl.IndexOf(';')).Trim();     // Remove comments
+                if (rl.Contains('='))                                                   // File definitions
                 {
-                    string fileTpye = rl.Substring(0, rl.IndexOf('=')).Trim(), fileName = rl.Substring(rl.IndexOf('=') + 1).Trim();
-                    if (fileTpye.Equals("cmd", StringComparison.CurrentCultureIgnoreCase)) cmdName = fileName;
-                    if (fileTpye.Length >= 2 && fileTpye.Substring(0, 2).Equals("st", StringComparison.CurrentCultureIgnoreCase) && 
-                        !(fileTpye.Length >= 8 && fileTpye.Substring(0, 8).Equals("stcommon", StringComparison.CurrentCultureIgnoreCase))) stNames.Add(fileName);
-                    if (fileTpye.Equals("anim", StringComparison.CurrentCultureIgnoreCase)) airName = fileName;
+                    string fileType = rl.Substring(0, rl.IndexOf('=')).Trim(), fileName = rl.Substring(rl.IndexOf('=') + 1).Trim();
+
+                    if (fileType.EqualsIgnoreCase("cmd")) cmdName = fileName;
+                    if (fileType.EqualsIgnoreCase("cns")) cnsName = fileName;
+                    if (fileType.Length >= 2 && fileType.Substring(0, 2).EqualsIgnoreCase("st") && 
+                        !(fileType.ContainsIgnoreCase("stcommon"))) stNames.Add(fileName);
+                    if (fileType.EqualsIgnoreCase("anim")) airName = fileName;
                 }
             }
+
             readFile.Close();
         }
 
+
+        //Read cns file to look for the width of character
+        private void ReadCns()
+        {
+            readFile = new StreamReader(charDirPath + cnsName);
+
+            for (rl = readFile.ReadLine(); rl != null; rl = readFile.ReadLine())
+            {
+                if (rl.Contains(';')) rl = rl.Substring(0, rl.IndexOf(';')).Trim();     // Remove comments
+
+                // Ground/air front width
+                if (rl.ContainsIgnoreCase("ground.front")) groundFront = int.Parse(rl.Substring(rl.IndexOf('=') + 1).Trim());
+                if (rl.ContainsIgnoreCase("air.front")) airFront = int.Parse(rl.Substring(rl.IndexOf('=') + 1).Trim());
+
+                if (groundFront >= 0 && airFront >= 0) break;
+            }
+
+            readFile.Close();
+        }
 
         //Read cmd file to find out all atk states
         private void ReadCmd()
@@ -60,37 +88,40 @@ namespace MugenAITool
             // Variables
             int getValue = -1;
             bool getType = false;
-            readFile = new StreamReader(dirRelativePath + cmdName);
+            readFile = new StreamReader(charDirPath + cmdName);
 
             for (rl = readFile.ReadLine(); rl != null; rl = readFile.ReadLine())
             {
-                if (rl.IndexOf(';') >= 0) rl = rl.Substring(0, rl.IndexOf(';')).Trim();     // Remove comments
-                if (rl.IndexOf('[') >= 0 && rl.Equals("[Statedef -1]", StringComparison.CurrentCultureIgnoreCase)) break;              // Find [Statedef -1] and stop
+                if (rl.Contains(';')) rl = rl.Substring(0, rl.IndexOf(';')).Trim();     // Remove comments
+                if (rl.Contains('[') && rl.EqualsIgnoreCase("[Statedef -1]")) break;    // Find [Statedef -1] and stop
             }
             
             // Search for all atk stateNos
             for (rl = readFile.ReadLine(); rl != null; rl = readFile.ReadLine())
             {
-                if (rl.IndexOf(';') >= 0) rl = rl.Substring(0, rl.IndexOf(';')).Trim();     // Remove comments
+                if (rl.Contains(';')) rl = rl.Substring(0, rl.IndexOf(';')).Trim();     // Remove comments
 
                 // Verify head of sctrl, type and value
                 // Case 1: [State -N] or [Statedef -N]
-                if (rl.Length > 9 && (rl.Substring(0, 9).Equals("[State -1", StringComparison.CurrentCultureIgnoreCase) || rl.Substring(0, 9).Equals("[Statedef", StringComparison.CurrentCultureIgnoreCase)))
+                if (rl.Length > 9 && (rl.Substring(0, 9).EqualsIgnoreCase("[State -1") || 
+                    rl.Substring(0, 9).EqualsIgnoreCase("[Statedef")))
                 {
                     if (getType && getValue >= 0 && !stateNos.Contains(getValue)) stateNos.Add(getValue);
                 }
                 // Case 2: Type is "changestate" or "selfstate"
-                else if (rl.IndexOf('=') >= 0 && rl.Substring(0, rl.IndexOf('=')).Trim().Equals("type", StringComparison.CurrentCultureIgnoreCase))
+                else if (rl.Contains('=') && rl.Substring(0, rl.IndexOf('=')).Trim().EqualsIgnoreCase("type"))
                 {
-                    if (rl.Substring(rl.IndexOf('=') + 1).Trim().Equals("changestate", StringComparison.CurrentCultureIgnoreCase) || rl.Substring(rl.IndexOf('=') + 1).Trim().Equals("selfstate", StringComparison.CurrentCultureIgnoreCase))
+                    if (rl.Substring(rl.IndexOf('=') + 1).Trim().EqualsIgnoreCase("changestate") || 
+                        rl.Substring(rl.IndexOf('=') + 1).Trim().EqualsIgnoreCase("selfstate"))
                         getType = true;
                 }
-                // Case 3: Value is non-negative
-                else if (rl.IndexOf('=') >= 0 && rl.Substring(0, rl.IndexOf('=')).Trim().Equals("value", StringComparison.CurrentCultureIgnoreCase))
+                // Case 3: Value is non-negative integer
+                else if (rl.Contains('=') && rl.Substring(0, rl.IndexOf('=')).Trim().EqualsIgnoreCase("value"))
                 {
                     try
                     {
                         getValue = int.Parse(rl.Substring(rl.IndexOf('=') + 1).Trim());
+                        // +++
                     } catch (Exception e) {
                         getValue = -1;
                     }
@@ -108,52 +139,217 @@ namespace MugenAITool
         {
             foreach (string stName in stNames)
             {
-                // sctrl_anim, changestate, movement
-                // Variables
+                readFile = new StreamReader(charDirPath + stName);
 
-                readFile = new StreamReader(dirRelativePath + stName);
                 for (rl = readFile.ReadLine(); rl != null; rl = readFile.ReadLine())
                 {
-                    if (rl.IndexOf(';') >= 0) rl = rl.Substring(0, rl.IndexOf(';')).Trim();                 // Remove comments
-                    if (rl.IndexOf('[') >= 0 && rl.Length > 11 && rl.Substring(0, 9).Equals("[Statedef", StringComparison.CurrentCultureIgnoreCase) && !rl[10].Equals('-'))   // Find [Statedef N] which N >= 0
+                    if (rl.Contains(';')) rl = rl.Substring(0, rl.IndexOf(';')).Trim();                 // Remove comments
+                    if (rl.Contains("[Statedef") && !rl[10].Equals('-'))                                // Find [Statedef N] which N >= 0
                     {
                         int stateNo = int.Parse(rl.Substring(10, rl.Length - 11).Trim());
                         if (stateNos.Contains(stateNo))
                         {
+                            // Variables
+                            //bool hitbyexisted;
+                            int inAir = 0, juggle = -1;
+
                             for (rl = readFile.ReadLine(); rl != null; rl = readFile.ReadLine())
                             {
-                                if (rl.IndexOf(';') >= 0) rl = rl.Substring(0, rl.IndexOf(';')).Trim();         // Remove comments
-                                if (rl.Length > 4 && rl.Substring(0, 4).Equals("Anim", StringComparison.CurrentCultureIgnoreCase))
+                                if (rl.Contains(';')) rl = rl.Substring(0, rl.IndexOf(';')).Trim();     // Remove comments
+                                if (rl.Length > 4 && rl.Substring(0, 4).EqualsIgnoreCase("Anim"))
                                 {
                                     List<int> stateData = new List<int>();
                                     stateData.Add(0);                                                           // Add movement
                                     try
                                     {
                                         stateData.Add(int.Parse(rl.Substring(rl.IndexOf('=') + 1).Trim()));     // Add anim
+                                        // +++
                                     }
                                     catch (Exception e)
                                     {
                                         stateData.Add(-1);
                                     }
-                                    stateDatas.Add(stateNo, stateData);
+                                    stateAnimDictionary.Add(stateNo, stateData);
+                                }
+                                if (rl.Length > 4 && rl.Substring(0, 4).EqualsIgnoreCase("Type"))
+                                {
+                                    if (rl.Substring(rl.IndexOf('=') + 1).Trim() == "A") inAir = 1;
+                                }
+                                if (rl.Length > 6 && rl.Substring(0, 6).EqualsIgnoreCase("Juggle"))
+                                {
+                                    juggle = int.Parse(rl.Substring(rl.IndexOf('=') + 1).Trim());
                                 }
                                 if (rl.Length > 0 && rl[0] == '[') break;
                             }
+
+                            // 
+                            List<int> propertiesList = new List<int>();
+                            propertiesList.Add(inAir);
+                            propertiesList.Add(juggle);
+                            stateProperties.Add(stateNo, propertiesList);
                         }
                     }
                 }
-
-                // if (rl.Length > 9 && (rl.Substring(0, 9).Equals("[State -1", StringComparison.CurrentCultureIgnoreCase) || rl.Substring(0, 9).Equals("[Statedef", StringComparison.CurrentCultureIgnoreCase)))
-
+                
                 readFile.Close();
             }
         }
 
         // Read air file
+        private void ReadAir()
+        {
+            // Variables
+            int airNo = 0, totalTime = 0, x1 = -999, x2 = 999, y1 = -999, y2 = 999;
+            bool clsn1 = false;
+
+            readFile = new StreamReader(charDirPath + airName);
+            for (rl = readFile.ReadLine(); rl != null; rl = readFile.ReadLine())
+            {
+                if (rl.Contains(';')) rl = rl.Substring(0, rl.IndexOf(';')).Trim();             // Remove comments
+
+                if (rl.ContainsIgnoreCase("[Begin Action"))                                     // If header of Begin Action
+                {
+                    // Total time 
+                    if (animDatas.ContainsKey(airNo) && animDatas[airNo] != null) animDatas[airNo][0].Add(totalTime + 1);
+
+                    // Reset all datas
+                    airNo = int.Parse(rl.Substring(14, rl.Length - 15));
+                    totalTime = 0;
+                    x1 = -999;
+                    x2 = 999;
+                    y1 = -999;
+                    y2 = 999;
+                    clsn1 = false;
+                } else if (Regex.Matches(rl, ",").Count >= 4) {                                 // If sprites and time
+
+                    // Get attack persist time
+                    for (int i = 0; i < 4; i += 1)
+                    {
+                        rl = rl.Substring(rl.IndexOf(',') + 1);
+                    }
+                    if (rl.Contains(',')) rl = rl.Substring(0, rl.IndexOf(','));
+                    int persistTime = int.Parse(rl.Trim());
+
+                    // Record datas if it has clsn1
+                    if (clsn1)
+                    {
+                        if (!animDatas.Keys.Contains(airNo)) animDatas.Add(airNo, new List<List<int>>());
+                        List<int> l = new List<int>();
+                        l.Add(x1);
+                        l.Add(x2);
+                        l.Add(y1);
+                        l.Add(y2);
+                        l.Add(totalTime + 1);
+                        l.Add(persistTime);
+                        animDatas[airNo].Add(l);
+                        clsn1 = false;
+                    }
+
+                    totalTime += persistTime;
+                } else if (rl.ContainsIgnoreCase("Clsn1[")) {                                   // If hit frame
+                    rl = rl.Substring(rl.IndexOf('=') + 1).Trim();
+                    for (int i = 0; i < 4; i += 1)
+                    {
+                        int tmp;
+                        if (rl.Contains(','))
+                        {
+                            tmp = int.Parse(rl.Substring(0, rl.IndexOf(',')).Trim());
+                            rl = rl.Substring(rl.IndexOf(',') + 1);
+                        }
+                        else tmp = int.Parse(rl.Trim());
+
+                        if (i % 2 == 0) {
+                            if (tmp > x1) x1 = tmp;
+                            if (tmp < x2) x2 = tmp;
+                        } else {
+                            if (tmp > y1) y1 = tmp;
+                            if (tmp < y2) y2 = tmp;
+                        }
+                    }
+                    clsn1 = true;
+                }
+            }
+
+            // Total time 
+            if (animDatas.ContainsKey(airNo) && animDatas[airNo] != null) animDatas[airNo][0].Add(totalTime + 1);
+
+            readFile.Close();
+        }
 
         // Combine and organize the data
+        // Write into target CSV file
+        private void CreateCsvFile()
+        {
+            // Create new directory if not exists
+            string toolTempDirPath = charDirPath + "\\MugenAITool";
+            if (!Directory.Exists(toolTempDirPath)) Directory.CreateDirectory(toolTempDirPath);
 
-        // Write into target file
+            // Create CSV file
+            string csvName = toolTempDirPath + '\\' + charName + "AtkDatas.csv";
+            writeFile = new StreamWriter(csvName, false, Encoding.UTF8);
 
+            // Write into target file
+            writeFile.WriteLine("招式,stateno,anim,范围x1,范围x2,范围y1,范围y2,攻击帧,持续时间,总时长,Juggle,");
+
+            // loop for all statenos, find the anims they are using
+            for (int i = 0; i < stateNos.Count; i += 1)
+            {
+                if (stateAnimDictionary.ContainsKey(stateNos[i]))
+                {
+                    List<int> animList = stateAnimDictionary[stateNos[i]];
+
+                    // loop for all anims
+                    for (int j = 0; j < animList.Count; j += 1)
+                    {
+                        if (animDatas.ContainsKey(animList[j]))
+                        {
+                            List<List<int>> stateDetails = animDatas[animList[j]];
+
+                            // loop for all hits
+                            for (int k = 0; k < stateDetails.Count; k += 1)
+                            {
+                                // StateNo and AnimNo
+                                string writeStr = ',' + stateNos[i].ToString() + ',' + animList[j].ToString() + ',';
+
+                                // loop for datas
+                                int dataSize = 7;
+                                for (int l = 0; l < dataSize; l += 1)
+                                {
+                                    if (l < stateDetails[k].Count)                                  // avoid null case
+                                    {
+                                        int value = stateDetails[k][l];
+
+                                        // P2BodyDist X
+                                        if (l <= 1)
+                                        {
+                                            // check on ground or in air, then minus width
+                                            if (stateProperties[stateNos[i]][0] > 0) {
+                                                value -= airFront;
+                                            } else {
+                                                value -= groundFront;
+                                            }
+                                            value -= 1;
+                                        }
+
+                                        writeStr += value;
+                                    }
+                                    writeStr += ',';
+                                }
+
+                                // Juggle
+                                writeStr += stateProperties[stateNos[i]][1] + ",";
+
+                                writeFile.WriteLine(writeStr);
+                            }
+                        }
+                    }
+                }
+            }
+
+            writeFile.Close();
+        }
     }
 }
+
+
+// + ',' +

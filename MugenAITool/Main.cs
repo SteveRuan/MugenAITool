@@ -33,14 +33,14 @@ namespace MugenAITool
             RH_Replace();
         }
         
-        private void RH_B2_Click(object sender, EventArgs e)
+        private void AS_B2_Click(object sender, EventArgs e)
         {
             OpenFileDialog readDef = new OpenFileDialog();
             if (readDef.ShowDialog() == DialogResult.OK)
             {
                 string defName = readDef.FileName;
                 AS_T1.Text = defName;
-                AS_T2.Text = defName.Substring(0, defName.LastIndexOf('.'));
+                AS_T2.Text = defName.Substring(0, defName.LastIndexOf('.')) + "AtkDatas";
             }
         }
 
