@@ -28,3 +28,6 @@ A tool for all Mugen players to make an AI for specific character automatically.
 - Updated version number.
 - Atk Storage: ReadCns(), ReadAir() and CreateCsvFile() finished, first draft of Atk Storage finished. Created StringHelpers.cs to handle strings, added RegularExpressions.cs but not used yet.
 - Mugen Template: Created new 2 templates.
+
+### 2017.12.10:
+- Atk Storage: Added StateType into CSV file

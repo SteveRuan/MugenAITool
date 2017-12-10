@@ -151,11 +151,13 @@ namespace MugenAITool
                         {
                             // Variables
                             //bool hitbyexisted;
-                            int inAir = 0, juggle = -1;
-
+                            int statetype = 0, juggle = -1;
+                            
                             for (rl = readFile.ReadLine(); rl != null; rl = readFile.ReadLine())
                             {
                                 if (rl.Contains(';')) rl = rl.Substring(0, rl.IndexOf(';')).Trim();     // Remove comments
+
+                                // Loop for all properties
                                 if (rl.Length > 4 && rl.Substring(0, 4).EqualsIgnoreCase("Anim"))
                                 {
                                     List<int> stateData = new List<int>();
@@ -173,18 +175,61 @@ namespace MugenAITool
                                 }
                                 if (rl.Length > 4 && rl.Substring(0, 4).EqualsIgnoreCase("Type"))
                                 {
-                                    if (rl.Substring(rl.IndexOf('=') + 1).Trim() == "A") inAir = 1;
+                                    // Statetype: S = 1, C = 2, A = 3, L = 4 (and U = 0)
+                                    string str = rl.Substring(rl.IndexOf('=') + 1).Trim();
+                                    switch (str)
+                                    {
+                                        case "S":
+                                            statetype = 1;
+                                            break;
+                                        case "C":
+                                            statetype = 2;
+                                            break;
+                                        case "A":
+                                            statetype = 3;
+                                            break;
+                                        case "L":
+                                            statetype = 4;
+                                            break;
+                                    }
                                 }
                                 if (rl.Length > 6 && rl.Substring(0, 6).EqualsIgnoreCase("Juggle"))
                                 {
                                     juggle = int.Parse(rl.Substring(rl.IndexOf('=') + 1).Trim());
                                 }
+
+                                /*
+                                // Loop for all state controllers
+                                if (rl.ContainsIgnoreCase("[State "))
+                                {
+                                    int AttackAttr = 0;
+                                    while (!rl.ContainsIgnoreCase("[Statedef"))
+                                    {
+                                        if (rl.ContainsIgnoreCase("type") && rl.ContainsIgnoreCase("projectile"))
+                                        {
+                                            AttackAttr = AttackAttr | 4;
+                                        }
+                                        if(rl.ContainsIgnoreCase("type") && rl.ContainsIgnoreCase("hitdef"))
+                                        {
+                                            rl = readFile.ReadLine();
+                                            if (rl.Contains(';')) rl = rl.Substring(0, rl.IndexOf(';')).Trim();     // Remove comments
+
+                                            while (!rl.ContainsIgnoreCase("[State "))
+                                            {
+
+                                            }
+                                        }
+                                    }
+                                }
+                                if (rl.Contains("[Statedef")) break;
+                                */
+
                                 if (rl.Length > 0 && rl[0] == '[') break;
                             }
 
-                            // 
+                            // List
                             List<int> propertiesList = new List<int>();
-                            propertiesList.Add(inAir);
+                            propertiesList.Add(statetype);
                             propertiesList.Add(juggle);
                             stateProperties.Add(stateNo, propertiesList);
                         }
@@ -289,7 +334,7 @@ namespace MugenAITool
             writeFile = new StreamWriter(csvName, false, Encoding.UTF8);
 
             // Write into target file
-            writeFile.WriteLine("招式,stateno,anim,范围x1,范围x2,范围y1,范围y2,攻击帧,持续时间,总时长,Juggle,");
+            writeFile.WriteLine("招式,StateNo,AnimNo,StateType,范围x1,范围x2,范围y1,范围y2,攻击帧,持续时间,总时长,Juggle,");
 
             // loop for all statenos, find the anims they are using
             for (int i = 0; i < stateNos.Count; i += 1)
@@ -308,8 +353,8 @@ namespace MugenAITool
                             // loop for all hits
                             for (int k = 0; k < stateDetails.Count; k += 1)
                             {
-                                // StateNo and AnimNo
-                                string writeStr = ',' + stateNos[i].ToString() + ',' + animList[j].ToString() + ',';
+                                // StateNo, AnimNo and StateType
+                                string writeStr = ',' + stateNos[i].ToString() + ',' + animList[j].ToString() + ',' + stateProperties[stateNos[i]][0] + ',';
 
                                 // loop for datas
                                 int dataSize = 7;
@@ -322,8 +367,8 @@ namespace MugenAITool
                                         // P2BodyDist X
                                         if (l <= 1)
                                         {
-                                            // check on ground or in air, then minus width
-                                            if (stateProperties[stateNos[i]][0] > 0) {
+                                            // check on ground or in air, then minus related width
+                                            if (stateProperties[stateNos[i]][0] == 3) {
                                                 value -= airFront;
                                             } else {
                                                 value -= groundFront;
