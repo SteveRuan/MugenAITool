@@ -396,5 +396,3 @@ namespace MugenAITool
     }
 }
 
-
-// + ',' +

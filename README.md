@@ -30,4 +30,5 @@ A tool for all Mugen players to make an AI for specific character automatically.
 - Mugen Template: Created new 2 templates.
 
 ### 2017.12.10:
-- Atk Storage: Added StateType into CSV file
+- Atk Storage: Added StateType into CSV file.
+- Mugen Template: Updated templates.
