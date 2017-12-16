@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -9,23 +10,24 @@ namespace MugenAITool
 {
     class AtkStorageManager
     {
-        // Variables
-        private string charName = "", defName = "", cmdName = "", cnsName = "", airName = "", rl, charDirPath;
+        // Global variables
+        private string defName = "", cmdName = "", cnsName = "", airName = "",
+            rl, charDirPath, targetCSVFilePath;
         private List<string> stNames = new List<string>();                                  // List of names of state files mentioned in def file
         private List<int> stateNos = new List<int>();                                       // List of state numbers from cmd file
         private int groundFront = -1, airFront = -1;                                        // Ground.front and air.front
-        private Dictionary<int, List<int>> stateProperties = new Dictionary<int, List<int>>();          // List of state properties, such as inAir, Juggle
+        private Dictionary<int, List<int>> stateProperties = new Dictionary<int, List<int>>();          // List of state properties, such as statetype, Juggle, attack_attribute and hitflag
         private Dictionary<int, List<int>> stateAnimDictionary = new Dictionary<int, List<int>>();      // Dictionary which match states and anims
         private Dictionary<int, List<List<int>>> animDatas = new Dictionary<int, List<List<int>>>();    // Atk anim number, distance X, Y and time
         private StreamReader readFile;
         private StreamWriter writeFile;
 
-        public AtkStorageManager(string defPath)
+        public AtkStorageManager(string defPath, string targetCSVFilePath)
         {
-            // Global variables
+            // Initialize global variables
             charDirPath = defPath.Substring(0, defPath.LastIndexOf('\\') + 1);
             defName = defPath.Substring(defPath.LastIndexOf('\\') + 1);
-            charName = defName.Substring(0, defName.LastIndexOf('.'));
+            this.targetCSVFilePath = targetCSVFilePath;
         }
 
         // Read def file to look for related cmd, st and air file
@@ -46,7 +48,8 @@ namespace MugenAITool
 
             for (rl = readFile.ReadLine(); rl != null; rl = readFile.ReadLine())
             {
-                if (rl.Contains(';')) rl = rl.Substring(0, rl.IndexOf(';')).Trim();     // Remove comments
+                rl = rl.RemoveMugenComment();
+
                 if (rl.Contains('='))                                                   // File definitions
                 {
                     string fileType = rl.Substring(0, rl.IndexOf('=')).Trim(), fileName = rl.Substring(rl.IndexOf('=') + 1).Trim();
@@ -70,7 +73,7 @@ namespace MugenAITool
 
             for (rl = readFile.ReadLine(); rl != null; rl = readFile.ReadLine())
             {
-                if (rl.Contains(';')) rl = rl.Substring(0, rl.IndexOf(';')).Trim();     // Remove comments
+                rl = rl.RemoveMugenComment();
 
                 // Ground/air front width
                 if (rl.ContainsIgnoreCase("ground.front")) groundFront = int.Parse(rl.Substring(rl.IndexOf('=') + 1).Trim());
@@ -92,14 +95,14 @@ namespace MugenAITool
 
             for (rl = readFile.ReadLine(); rl != null; rl = readFile.ReadLine())
             {
-                if (rl.Contains(';')) rl = rl.Substring(0, rl.IndexOf(';')).Trim();     // Remove comments
+                rl = rl.RemoveMugenComment();
                 if (rl.Contains('[') && rl.EqualsIgnoreCase("[Statedef -1]")) break;    // Find [Statedef -1] and stop
             }
             
             // Search for all atk stateNos
             for (rl = readFile.ReadLine(); rl != null; rl = readFile.ReadLine())
             {
-                if (rl.Contains(';')) rl = rl.Substring(0, rl.IndexOf(';')).Trim();     // Remove comments
+                rl = rl.RemoveMugenComment();
 
                 // Verify head of sctrl, type and value
                 // Case 1: [State -N] or [Statedef -N]
@@ -141,12 +144,17 @@ namespace MugenAITool
             {
                 readFile = new StreamReader(charDirPath + stName);
 
+                // Variables
+                bool reaingHitdef = false;
+                int stateNo = 0;
+
                 for (rl = readFile.ReadLine(); rl != null; rl = readFile.ReadLine())
                 {
-                    if (rl.Contains(';')) rl = rl.Substring(0, rl.IndexOf(';')).Trim();                 // Remove comments
-                    if (rl.Contains("[Statedef") && !rl[10].Equals('-'))                                // Find [Statedef N] which N >= 0
+                    rl = rl.RemoveMugenComment();
+                    
+                    if (rl.Contains("[Statedef") && !rl[10].Equals('-'))                            // Find [Statedef N] which N >= 0
                     {
-                        int stateNo = int.Parse(rl.Substring(10, rl.Length - 11).Trim());
+                        stateNo = int.Parse(rl.Substring(10, rl.Length - 11).Trim());
                         if (stateNos.Contains(stateNo))
                         {
                             // Variables
@@ -155,17 +163,17 @@ namespace MugenAITool
                             
                             for (rl = readFile.ReadLine(); rl != null; rl = readFile.ReadLine())
                             {
-                                if (rl.Contains(';')) rl = rl.Substring(0, rl.IndexOf(';')).Trim();     // Remove comments
+                                rl = rl.RemoveMugenComment();
 
                                 // Loop for all properties
                                 if (rl.Length > 4 && rl.Substring(0, 4).EqualsIgnoreCase("Anim"))
                                 {
                                     List<int> stateData = new List<int>();
-                                    stateData.Add(0);                                                           // Add movement
+                                    stateData.Add(0);                                               // Add movement
                                     try
                                     {
                                         stateData.Add(int.Parse(rl.Substring(rl.IndexOf('=') + 1).Trim()));     // Add anim
-                                        // +++
+                                        // +++ add mugen formula later
                                     }
                                     catch (Exception e)
                                     {
@@ -176,8 +184,7 @@ namespace MugenAITool
                                 if (rl.Length > 4 && rl.Substring(0, 4).EqualsIgnoreCase("Type"))
                                 {
                                     // Statetype: S = 1, C = 2, A = 3, L = 4 (and U = 0)
-                                    string str = rl.Substring(rl.IndexOf('=') + 1).Trim();
-                                    switch (str)
+                                    switch (rl.Substring(rl.IndexOf('=') + 1).Trim())
                                     {
                                         case "S":
                                             statetype = 1;
@@ -197,41 +204,55 @@ namespace MugenAITool
                                 {
                                     juggle = int.Parse(rl.Substring(rl.IndexOf('=') + 1).Trim());
                                 }
-
-                                /*
-                                // Loop for all state controllers
-                                if (rl.ContainsIgnoreCase("[State "))
-                                {
-                                    int AttackAttr = 0;
-                                    while (!rl.ContainsIgnoreCase("[Statedef"))
-                                    {
-                                        if (rl.ContainsIgnoreCase("type") && rl.ContainsIgnoreCase("projectile"))
-                                        {
-                                            AttackAttr = AttackAttr | 4;
-                                        }
-                                        if(rl.ContainsIgnoreCase("type") && rl.ContainsIgnoreCase("hitdef"))
-                                        {
-                                            rl = readFile.ReadLine();
-                                            if (rl.Contains(';')) rl = rl.Substring(0, rl.IndexOf(';')).Trim();     // Remove comments
-
-                                            while (!rl.ContainsIgnoreCase("[State "))
-                                            {
-
-                                            }
-                                        }
-                                    }
-                                }
-                                if (rl.Contains("[Statedef")) break;
-                                */
-
                                 if (rl.Length > 0 && rl[0] == '[') break;
                             }
 
-                            // List
+                            // Put property list into stateProperties
                             List<int> propertiesList = new List<int>();
                             propertiesList.Add(statetype);
                             propertiesList.Add(juggle);
+                            propertiesList.Add(0);                          // For attack attribute, start from 0
+                            propertiesList.Add(0);                          // For combo available, start from 0
                             stateProperties.Add(stateNo, propertiesList);
+                        }
+                    }
+                    if (stateNos.Contains(stateNo))
+                    {
+                        if (rl.Length > 0 && rl[0] == '[' && reaingHitdef) reaingHitdef = false;    // Reset reaingHitdef when we read new state controller
+
+                        if (rl.ContainsIgnoreCase("type") && rl.ContainsIgnoreCase("hitdef"))
+                        {
+                            reaingHitdef = true;
+                        }
+                        if (rl.ContainsIgnoreCase("attr") && reaingHitdef)
+                        {
+                            switch (rl[rl.Length - 1])
+                            {
+                                case 'A':
+                                    stateProperties[stateNo][2] |= 1;
+                                    break;
+                                case 'T':
+                                    stateProperties[stateNo][2] |= 2;
+                                    break;
+                                case 'P':
+                                    stateProperties[stateNo][2] |= 4;
+                                    break;
+                            }
+                            stateProperties[stateNo][2] &= 7;                               // Remove the 4th bit which is helper
+                        }
+                        if (rl.ContainsIgnoreCase("hitflag") && reaingHitdef)
+                        {
+                            if (rl.Contains("+")) stateProperties[stateNo][3] = 1;          // Means can hit when emeny is hit
+                            if (rl.Contains("-")) stateProperties[stateNo][3] = -1;         // Means can hit when emeny is not hit
+                        }
+                        if (rl.ContainsIgnoreCase("type") && rl.ContainsIgnoreCase("projectile"))
+                        {
+                            stateProperties[stateNo][2] |= 4;
+                            stateProperties[stateNo][2] &= 7;                               // Remove the 4th bit which is helper
+                        }
+                        if (rl.ContainsIgnoreCase("type") && rl.ContainsIgnoreCase("helper") && (stateProperties[stateNo][2] & 7) == 0)
+                        {
+                            stateProperties[stateNo][2] |= 8;
                         }
                     }
                 }
@@ -250,7 +271,7 @@ namespace MugenAITool
             readFile = new StreamReader(charDirPath + airName);
             for (rl = readFile.ReadLine(); rl != null; rl = readFile.ReadLine())
             {
-                if (rl.Contains(';')) rl = rl.Substring(0, rl.IndexOf(';')).Trim();             // Remove comments
+                rl = rl.RemoveMugenComment();
 
                 if (rl.ContainsIgnoreCase("[Begin Action"))                                     // If header of Begin Action
                 {
@@ -330,11 +351,11 @@ namespace MugenAITool
             if (!Directory.Exists(toolTempDirPath)) Directory.CreateDirectory(toolTempDirPath);
 
             // Create CSV file
-            string csvName = toolTempDirPath + '\\' + charName + "AtkDatas.csv";
+            string csvName = targetCSVFilePath + ".csv";
             writeFile = new StreamWriter(csvName, false, Encoding.UTF8);
 
             // Write into target file
-            writeFile.WriteLine("招式,StateNo,AnimNo,StateType,范围x1,范围x2,范围y1,范围y2,攻击帧,持续时间,总时长,Juggle,");
+            writeFile.WriteLine("招式,StateNo,AnimNo,StateType,Juggle,AttackAttr,Hitflag,范围x1,范围x2,范围y1,范围y2,攻击帧,持续时间,总时长,");
 
             // loop for all statenos, find the anims they are using
             for (int i = 0; i < stateNos.Count; i += 1)
@@ -354,7 +375,13 @@ namespace MugenAITool
                             for (int k = 0; k < stateDetails.Count; k += 1)
                             {
                                 // StateNo, AnimNo and StateType
-                                string writeStr = ',' + stateNos[i].ToString() + ',' + animList[j].ToString() + ',' + stateProperties[stateNos[i]][0] + ',';
+                                string writeStr = ',' + stateNos[i].ToString() + ',' + animList[j].ToString() + ',';
+
+                                for (int l = 0; l < 4; l += 1)
+                                {
+                                    writeStr += stateProperties[stateNos[i]][l];
+                                    writeStr += ',';
+                                }
 
                                 // loop for datas
                                 int dataSize = 7;
@@ -381,9 +408,6 @@ namespace MugenAITool
                                     writeStr += ',';
                                 }
 
-                                // Juggle
-                                writeStr += stateProperties[stateNos[i]][1] + ",";
-
                                 writeFile.WriteLine(writeStr);
                             }
                         }
@@ -392,6 +416,9 @@ namespace MugenAITool
             }
 
             writeFile.Close();
+
+            // Open the CSV file
+            Process.Start(csvName);
         }
     }
 }

@@ -8,17 +8,26 @@ namespace MugenAITool
 {
     public static class StringExtensions
     {
-        public static bool ContainsIgnoreCase(this String str, String substring)
+        // Ignore case String.Contains()
+        public static bool ContainsIgnoreCase(this String str, String substr)
         {
-            if (substring == null) throw new ArgumentNullException("substring", "substring cannot be null.");
+            if (str == null) return false;
+            if (substr == null) throw new ArgumentNullException("substring", "substring cannot be null.");
             else if (!Enum.IsDefined(typeof(StringComparison), StringComparison.CurrentCultureIgnoreCase)) throw new ArgumentException("comp is not a member of StringComparison", "comp");
-
-            return str.IndexOf(substring, StringComparison.CurrentCultureIgnoreCase) >= 0;
+            return str.IndexOf(substr, StringComparison.CurrentCultureIgnoreCase) >= 0;
         }
 
+        // Ignore case String.Equals() method 
         public static bool EqualsIgnoreCase(this String str, String substring)
         {
             return str.Equals(substring, StringComparison.CurrentCultureIgnoreCase);
+        }
+
+        // Remove comment in Mugen code
+        public static String RemoveMugenComment(this String str)
+        {
+            if (str.Contains(';')) str = str.Substring(0, str.IndexOf(';')).Trim();     
+            return str;
         }
     }
 }

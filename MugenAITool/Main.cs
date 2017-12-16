@@ -38,15 +38,16 @@ namespace MugenAITool
             OpenFileDialog readDef = new OpenFileDialog();
             if (readDef.ShowDialog() == DialogResult.OK)
             {
-                string defName = readDef.FileName;
-                AS_T1.Text = defName;
-                AS_T2.Text = defName.Substring(0, defName.LastIndexOf('.')) + "AtkDatas";
+                string defPath = readDef.FileName;
+                string charName = defPath.Substring(defPath.LastIndexOf('\\') + 1, defPath.LastIndexOf('.') - defPath.LastIndexOf('\\') - 1);
+                AS_T1.Text = defPath;
+                AS_T2.Text = defPath.Substring(0, defPath.LastIndexOf('\\')) + "\\MugenAITool\\" + charName + "AtkDatas";
             }
         }
 
         private void AS_B1_Click(object sender, EventArgs e)
         {
-            AtkStorageManager ASM = new AtkStorageManager(AS_T1.Text);
+            AtkStorageManager ASM = new AtkStorageManager(AS_T1.Text, AS_T2.Text);
             ASM.AtkStorageMake();
         }
 
