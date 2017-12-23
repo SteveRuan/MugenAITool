@@ -16,7 +16,8 @@ namespace MugenAITool
         private List<string> stNames = new List<string>();                                  // List of names of state files mentioned in def file
         private List<int> stateNos = new List<int>();                                       // List of state numbers from cmd file
         private int groundFront = -1, airFront = -1;                                        // Ground.front and air.front
-        private Dictionary<int, List<int>> stateProperties = new Dictionary<int, List<int>>();          // List of state properties, such as statetype, Juggle, attack_attribute and hitflag
+        private const int pausetimeStart = 5;                                               // The starting index of point pausetime in properties list
+        private Dictionary<int, List<int>> stateProperties = new Dictionary<int, List<int>>();          // List of state properties, such as statetype, Juggle, attack_attribute, hitflag, and hit/guard time differences
         private Dictionary<int, List<int>> stateAnimDictionary = new Dictionary<int, List<int>>();      // Dictionary which match states and anims
         private Dictionary<int, List<List<int>>> animDatas = new Dictionary<int, List<List<int>>>();    // Atk anim number, distance X, Y and time
         private StreamReader readFile;
@@ -145,8 +146,8 @@ namespace MugenAITool
                 readFile = new StreamReader(charDirPath + stName);
 
                 // Variables
-                bool reaingHitdef = false;
-                int stateNo = 0;
+                string stateControllerType = "";
+                int stateNo = 0, pausetimeLevel = 0, guardCtrltimeLevel = 0, guardHittimeLevel = 0, airGuardCtrltimeLevel = 0;
 
                 for (rl = readFile.ReadLine(); rl != null; rl = readFile.ReadLine())
                 {
@@ -211,20 +212,33 @@ namespace MugenAITool
                             List<int> propertiesList = new List<int>();
                             propertiesList.Add(statetype);
                             propertiesList.Add(juggle);
-                            propertiesList.Add(0);                          // For attack attribute, start from 0
-                            propertiesList.Add(0);                          // For combo available, start from 0
+
+                            // Added new properties for attack attribute, combo available, guard flag, pausetime difference, guard pausetime difference, ground / air hittime / guardtime differences
+                            for (int i = 0; i < 10; i +=1)
+                            {
+                                propertiesList.Add(i == 7 ? 20 : 0);
+                            }
+
                             stateProperties.Add(stateNo, propertiesList);
                         }
                     }
                     if (stateNos.Contains(stateNo))
                     {
-                        if (rl.Length > 0 && rl[0] == '[' && reaingHitdef) reaingHitdef = false;    // Reset reaingHitdef when we read new state controller
+                        if (rl.Length > 0 && rl[0] == '[' && stateControllerType.EqualsIgnoreCase("hitdef"))
+                        {
+                            // Reset stateControllerType, guardCtrltimeLevel, guardHittimeLevel and airGuardCtrltimeLevelwhen we read new state controller
+                            stateControllerType = "";
+                            pausetimeLevel = 0;
+                            guardCtrltimeLevel = 0;
+                            guardHittimeLevel = 0;
+                            airGuardCtrltimeLevel = 0;
+                        }
 
                         if (rl.ContainsIgnoreCase("type") && rl.ContainsIgnoreCase("hitdef"))
                         {
-                            reaingHitdef = true;
+                            stateControllerType = "hitdef";
                         }
-                        if (rl.ContainsIgnoreCase("attr") && reaingHitdef)
+                        else if (rl.ContainsIgnoreCase("attr") && stateControllerType.EqualsIgnoreCase("hitdef"))
                         {
                             switch (rl[rl.Length - 1])
                             {
@@ -240,19 +254,94 @@ namespace MugenAITool
                             }
                             stateProperties[stateNo][2] &= 7;                               // Remove the 4th bit which is helper
                         }
-                        if (rl.ContainsIgnoreCase("hitflag") && reaingHitdef)
+                        else if (rl.ContainsIgnoreCase("hitflag") && stateControllerType.EqualsIgnoreCase("hitdef"))
                         {
                             if (rl.Contains("+")) stateProperties[stateNo][3] = 1;          // Means can hit when emeny is hit
                             if (rl.Contains("-")) stateProperties[stateNo][3] = -1;         // Means can hit when emeny is not hit
                         }
-                        if (rl.ContainsIgnoreCase("type") && rl.ContainsIgnoreCase("projectile"))
+                        else if (rl.ContainsIgnoreCase("guardflag") && stateControllerType.EqualsIgnoreCase("hitdef"))
+                        {
+                            rl = rl.Substring(rl.IndexOf('=') + 1);
+
+                            if (rl.ContainsIgnoreCase("H"))
+                            {
+                                stateProperties[stateNo][4] |= 1;
+                            }
+                            if (rl.ContainsIgnoreCase("L"))
+                            {
+                                stateProperties[stateNo][4] |= 2;
+                            }
+                            if (rl.ContainsIgnoreCase("A"))
+                            {
+                                stateProperties[stateNo][4] |= 4;
+                            }
+                            if (rl.ContainsIgnoreCase("M"))
+                            {
+                                stateProperties[stateNo][4] |= 3;
+                            }
+                        }
+                        else if (rl.ContainsIgnoreCase("type") && rl.ContainsIgnoreCase("projectile"))
                         {
                             stateProperties[stateNo][2] |= 4;
                             stateProperties[stateNo][2] &= 7;                               // Remove the 4th bit which is helper
                         }
-                        if (rl.ContainsIgnoreCase("type") && rl.ContainsIgnoreCase("helper") && (stateProperties[stateNo][2] & 7) == 0)
+                        else if (rl.ContainsIgnoreCase("type") && rl.ContainsIgnoreCase("helper") && (stateProperties[stateNo][2] & 7) == 0)
                         {
                             stateProperties[stateNo][2] |= 8;
+                        }
+
+                        // For pausetime / guard.pausetime
+                        else if (rl.ContainsIgnoreCase("pausetime") && stateControllerType.EqualsIgnoreCase("hitdef"))
+                        {
+                            stateProperties[stateNo][pausetimeStart] = int.Parse(rl.Substring(rl.IndexOf('=') + 1, rl.IndexOf(',') - rl.IndexOf('=') - 1).Trim()) - int.Parse(rl.Substring(rl.IndexOf(',') + 1).Trim());
+                            if (pausetimeLevel < 1) stateProperties[stateNo][pausetimeStart+1] = stateProperties[stateNo][pausetimeStart];
+                        }
+                        else if (rl.ContainsIgnoreCase("guard.pausetime") && stateControllerType.EqualsIgnoreCase("hitdef"))
+                        {
+                            stateProperties[stateNo][pausetimeStart+1] = stateProperties[stateNo][pausetimeStart];
+                            pausetimeLevel = 1;
+                        }
+
+                        // For ground/air.hittime
+                        else if (rl.ContainsIgnoreCase("ground.hittime") && stateControllerType.EqualsIgnoreCase("hitdef"))
+                        {
+                            stateProperties[stateNo][pausetimeStart+2] = int.Parse(rl.Substring(rl.IndexOf('=') + 1).Trim());
+                            if (guardHittimeLevel < 1) stateProperties[stateNo][pausetimeStart+5] = stateProperties[stateNo][pausetimeStart+2];
+                        }
+                        else if (rl.ContainsIgnoreCase("air.hittime") && stateControllerType.EqualsIgnoreCase("hitdef"))
+                        {
+                            stateProperties[stateNo][pausetimeStart+3] = int.Parse(rl.Substring(rl.IndexOf('=') + 1).Trim());
+                        }
+
+                        // For guard.ctrltime
+                        else if (rl.ContainsIgnoreCase("guard.ctrltime") && stateControllerType.EqualsIgnoreCase("hitdef"))
+                        {
+                            stateProperties[stateNo][pausetimeStart+4] = int.Parse(rl.Substring(rl.IndexOf('=') + 1).Trim());
+                            guardCtrltimeLevel = 2;
+                            if (airGuardCtrltimeLevel < 1) stateProperties[stateNo][pausetimeStart+6] = stateProperties[stateNo][pausetimeStart+4];
+                        }
+                        else if (rl.ContainsIgnoreCase("guard.slidetime") && guardCtrltimeLevel < 2 && stateControllerType.EqualsIgnoreCase("hitdef"))
+                        {
+                            stateProperties[stateNo][pausetimeStart+4] = int.Parse(rl.Substring(rl.IndexOf('=') + 1).Trim());
+                            guardCtrltimeLevel = 1;
+                        }
+                        else if (rl.ContainsIgnoreCase("ground.slidetime") && guardCtrltimeLevel < 1 && stateControllerType.EqualsIgnoreCase("hitdef"))
+                        {
+                            stateProperties[stateNo][pausetimeStart+4] = int.Parse(rl.Substring(rl.IndexOf('=') + 1).Trim());
+                        }
+
+                        // For guard.hittime
+                        else if (rl.ContainsIgnoreCase("guard.hittime") && stateControllerType.EqualsIgnoreCase("hitdef"))
+                        {
+                            stateProperties[stateNo][pausetimeStart+5] = int.Parse(rl.Substring(rl.IndexOf('=') + 1).Trim());
+                            guardHittimeLevel = 1;
+                        }
+
+                        // For airguard.ctrltime
+                        else if (rl.ContainsIgnoreCase("airguard.ctrltime") && stateControllerType.EqualsIgnoreCase("hitdef"))
+                        {
+                            stateProperties[stateNo][pausetimeStart+6] = int.Parse(rl.Substring(rl.IndexOf('=') + 1).Trim());
+                            airGuardCtrltimeLevel = 1;
                         }
                     }
                 }
@@ -276,8 +365,14 @@ namespace MugenAITool
                 if (rl.ContainsIgnoreCase("[Begin Action"))                                     // If header of Begin Action
                 {
                     // Total time 
-                    if (animDatas.ContainsKey(airNo) && animDatas[airNo] != null) animDatas[airNo][0].Add(totalTime + 1);
-
+                    if (animDatas.ContainsKey(airNo) && animDatas[airNo] != null)
+                    {
+                        for (int i = 0; i < animDatas[airNo].Count; i += 1)
+                        {
+                            animDatas[airNo][i].Add(totalTime + 1);
+                        }
+                    }
+                    
                     // Reset all datas
                     airNo = int.Parse(rl.Substring(14, rl.Length - 15));
                     totalTime = 0;
@@ -335,9 +430,15 @@ namespace MugenAITool
                     clsn1 = true;
                 }
             }
-
-            // Total time 
-            if (animDatas.ContainsKey(airNo) && animDatas[airNo] != null) animDatas[airNo][0].Add(totalTime + 1);
+            
+            // Total time after reading whole file if the last action is attack
+            if (animDatas.ContainsKey(airNo) && animDatas[airNo] != null)
+            {
+                for (int i = 0; i < animDatas[airNo].Count; i += 1)
+                {
+                    animDatas[airNo][i].Add(totalTime + 1);
+                }
+            }
 
             readFile.Close();
         }
@@ -355,35 +456,35 @@ namespace MugenAITool
             writeFile = new StreamWriter(csvName, false, Encoding.UTF8);
 
             // Write into target file
-            writeFile.WriteLine("招式,StateNo,AnimNo,StateType,Juggle,AttackAttr,Hitflag,范围x1,范围x2,范围y1,范围y2,攻击帧,持续时间,总时长,");
+            writeFile.WriteLine("招式,StateNo,AnimNo,StateType,Juggle,AttackAttr,Hitflag,Guardflag,范围x1,范围x2,范围y1,范围y2,攻击发生帧,持续时间,总时长,地面击中硬直差,空中击中硬直差,地面被防硬直差,空中被防硬直差,");
 
-            // loop for all statenos, find the anims they are using
+            // Loop for all statenos, find the anims they are using
             for (int i = 0; i < stateNos.Count; i += 1)
             {
                 if (stateAnimDictionary.ContainsKey(stateNos[i]))
                 {
-                    List<int> animList = stateAnimDictionary[stateNos[i]];
+                    List<int> animCountInState = stateAnimDictionary[stateNos[i]];
 
-                    // loop for all anims
-                    for (int j = 0; j < animList.Count; j += 1)
+                    // Loop for all anims
+                    for (int j = 0; j < animCountInState.Count; j += 1)
                     {
-                        if (animDatas.ContainsKey(animList[j]))
+                        if (animDatas.ContainsKey(animCountInState[j]))
                         {
-                            List<List<int>> stateDetails = animDatas[animList[j]];
+                            List<List<int>> stateDetails = animDatas[animCountInState[j]];
 
-                            // loop for all hits
+                            // Loop for all hits
                             for (int k = 0; k < stateDetails.Count; k += 1)
                             {
-                                // StateNo, AnimNo and StateType
-                                string writeStr = ',' + stateNos[i].ToString() + ',' + animList[j].ToString() + ',';
+                                // StateNo, AnimNo, StateType, Juggle, AttackAttr, Hitflag and Guardflag
+                                string writeStr = ',' + stateNos[i].ToString() + ',' + animCountInState[j].ToString() + ',';
 
-                                for (int l = 0; l < 4; l += 1)
+                                for (int l = 0; l < pausetimeStart; l += 1)
                                 {
                                     writeStr += stateProperties[stateNos[i]][l];
                                     writeStr += ',';
                                 }
 
-                                // loop for datas
+                                // Loop for datas
                                 int dataSize = 7;
                                 for (int l = 0; l < dataSize; l += 1)
                                 {
@@ -406,6 +507,24 @@ namespace MugenAITool
                                         writeStr += value;
                                     }
                                     writeStr += ',';
+                                }
+
+                                // We need to choose the smaller one from guard.ctrltime and guard.hittime, to be ground guard time, remove the unnecessary one
+                                if (stateProperties[stateNos[i]].Count > pausetimeStart + 6)
+                                {
+                                    stateProperties[stateNos[i]].RemoveAt(pausetimeStart + 
+                                        ((stateProperties[stateNos[i]][pausetimeStart + 4] < stateProperties[stateNos[i]][pausetimeStart + 5]) ? 5 : 4));
+                                }
+                                // Loop for hit / guard time differences
+                                for (int l = pausetimeStart + 2; l < pausetimeStart + 6; l += 1)
+                                {
+                                        //
+                                        int pausetimeDifference = (l < pausetimeStart + 4) ? stateProperties[stateNos[i]][pausetimeStart] : stateProperties[stateNos[i]][pausetimeStart+1];
+
+                                        // Hit / guard time differences = hit / guard time + 1 + pausetime difference - (totaltime - 1 - attacktime)
+                                        int value = stateProperties[stateNos[i]][l] + 1 + pausetimeDifference - (stateDetails[k][6] - 1 - stateDetails[k][4]);
+                                        writeStr += value;
+                                        writeStr += ',';
                                 }
 
                                 writeFile.WriteLine(writeStr);

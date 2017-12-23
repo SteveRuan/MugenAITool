@@ -32,3 +32,6 @@ A tool for all Mugen players to make an AI for specific character automatically.
 ### 2017.12.10:
 - Atk Storage: Added StateType into CSV file.
 - Mugen Template: Updated templates.
+
+### 2017.12.23:
+- Atk Storage: Added stateControllerType to identify the state crontroller, added Guardflag, Hit / Guard Pausetime into CSV file.
