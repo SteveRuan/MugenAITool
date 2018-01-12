@@ -32,7 +32,13 @@ namespace MugenAITool
         {
             RH_Replace();
         }
-        
+
+        private void AS_B1_Click(object sender, EventArgs e)
+        {
+            AtkStorageManager ASM = new AtkStorageManager(AS_T1.Text, AS_T2.Text);
+            ASM.AtkStorageMake();
+        }
+
         private void AS_B2_Click(object sender, EventArgs e)
         {
             OpenFileDialog readDef = new OpenFileDialog();
@@ -45,11 +51,57 @@ namespace MugenAITool
             }
         }
 
-        private void AS_B1_Click(object sender, EventArgs e)
+        private void ASM_B1_Click(object sender, EventArgs e)
         {
-            AtkStorageManager ASM = new AtkStorageManager(AS_T1.Text, AS_T2.Text);
-            ASM.AtkStorageMake();
+            AISwitchManager ASM = new AISwitchManager(ASM_T1.Text, ASM_CB1.Text, ASM_NUD1.Text, ASM_R1.Checked, ASM_R2.Checked);
+            ASM.AISwitchMake();
         }
 
+        private void ASM_B2_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog readCmd = new OpenFileDialog();
+            if (readCmd.ShowDialog() == DialogResult.OK)
+            {
+                string cmdPath = readCmd.FileName;
+                ASM_T1.Text = cmdPath;
+            }
+        }
+
+        private void GM_B1_Click(object sender, EventArgs e)
+        {
+            GuardManager GM = new GuardManager(GM_T1.Text, GM_T2.Text, ASM_CB1.Text, ASM_NUD1.Text);
+            GM.GuardCmdMake();
+            GM.GuardStCommonMake();
+        }
+
+        private void GM_B2_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog readCmd = new OpenFileDialog();
+            if (readCmd.ShowDialog() == DialogResult.OK)
+            {
+                string cmdPath = readCmd.FileName;
+                GM_T1.Text = cmdPath;
+            }
+        }
+
+        private void GM_B3_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog readStCommon = new OpenFileDialog();
+            if (readStCommon.ShowDialog() == DialogResult.OK)
+            {
+                string stCommonPath = readStCommon.FileName;
+                GM_T2.Text = stCommonPath;
+            }
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void label0_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

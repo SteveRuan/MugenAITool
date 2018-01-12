@@ -2,7 +2,7 @@
 
 ## Description:
 
-A tool for mugen AIs. It is produced not only for AI authors but also the players who don't know about character AI.  
+A tool for mugen AIs. It is produced not only for AI authors but also for the players who don't know about character AI.  
 There are 3 modules in it, Replace Helper, Atk Storage, and Automatic AI Maker. Automatic AI Maker is not ready yet.
 
 ## Components
@@ -27,11 +27,19 @@ A tool for all Mugen players to make an AI for specific character automatically.
 ### 2017.11.12:
 - Updated version number.
 - Atk Storage: ReadCns(), ReadAir() and CreateCsvFile() finished, first draft of Atk Storage finished. Created StringHelpers.cs to handle strings, added RegularExpressions.cs but not used yet.
-- Mugen Template: Created new 2 templates.
+- Mugen Template: Created new 2 Neutral templates.
 
 ### 2017.12.10:
 - Atk Storage: Added StateType into CSV file.
-- Mugen Template: Updated templates.
+- Mugen Template: Updated Neutral templates.
 
 ### 2017.12.23:
 - Atk Storage: Added stateControllerType to identify the state crontroller, added Guardflag, Hit / Guard Pausetime into CSV file.
+
+### 2017.12.31:
+- Main: Added menu bar (Language and Help submenu) and new tabs (Mainpage, AI Switch, InvincibleCounter, Punish, Stuffing, Pressuring, Combo, Neutral, Guard and Movement). Renamed components.
+- AI Switch Manager: First draft.
+- Guard Manager: First draft.
+- Mugen Template: Created new AI Switch and 2 Guard templates.
+
+
