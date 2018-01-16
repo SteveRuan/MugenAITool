@@ -42,4 +42,5 @@ A tool for all Mugen players to make an AI for specific character automatically.
 - Guard Manager: First draft.
 - Mugen Template: Created new AI Switch and 2 Guard templates.
 
-
+### 2018.01.13:
+- Main: Created main page and renamed variables.
