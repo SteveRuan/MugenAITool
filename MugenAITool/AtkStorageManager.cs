@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -11,66 +10,39 @@ namespace MugenAITool
     class AtkStorageManager
     {
         // Global variables
-        private string defName = "", cmdName = "", cnsName = "", airName = "",
-            rl, charDirPath, targetCSVFilePath;
-        private List<string> stNames = new List<string>();                                  // List of names of state files mentioned in def file
-        private List<int> stateNos = new List<int>();                                       // List of state numbers from cmd file
-        private int groundFront = -1, airFront = -1;                                        // Ground.front and air.front
-        private const int pausetimeStart = 5;                                               // The starting index of point pausetime in properties list
+        private CharFilesInfo charFilesInfo;
+        private string rl, targetCsvFilePath;
+        private List<int> stateNos = new List<int>();                                               // List of state numbers from cmd file
+        private int groundFront = -1, airFront = -1;                                                // Ground.front and air.front
+        private const int pausetimeStart = 5;                                                       // The starting index of point pausetime in properties list
         private Dictionary<int, List<int>> stateProperties = new Dictionary<int, List<int>>();          // List of state properties, such as statetype, Juggle, attack_attribute, hitflag, and hit/guard time differences
         private Dictionary<int, List<int>> stateAnimDictionary = new Dictionary<int, List<int>>();      // Dictionary which match states and anims
         private Dictionary<int, List<List<int>>> animDatas = new Dictionary<int, List<List<int>>>();    // Atk anim number, distance X, Y and time
         private StreamReader readFile;
         private StreamWriter writeFile;
 
-        public AtkStorageManager(string defPath, string targetCSVFilePath)
+        public AtkStorageManager(CharFilesInfo charFilesInfo, string targetCsvFilePath)
         {
             // Initialize global variables
-            charDirPath = defPath.Substring(0, defPath.LastIndexOf('\\') + 1);
-            defName = defPath.Substring(defPath.LastIndexOf('\\') + 1);
-            this.targetCSVFilePath = targetCSVFilePath;
+            this.charFilesInfo = charFilesInfo;
+            this.targetCsvFilePath = targetCsvFilePath;
         }
 
         // Read def file to look for related cmd, st and air file
         public void AtkStorageMake()
         {
-            ReadDef();
             ReadCns();
             ReadCmd();
             ReadSt();
             ReadAir();
             CreateCsvFile();
+
         }
-
-        // Read def file to look for related cmd, st and air file
-        private void ReadDef()
-        {
-            readFile = new StreamReader(charDirPath + defName);
-
-            for (rl = readFile.ReadLine(); rl != null; rl = readFile.ReadLine())
-            {
-                rl = rl.RemoveMugenComment();
-
-                if (rl.Contains('='))                                                   // File definitions
-                {
-                    string fileType = rl.Substring(0, rl.IndexOf('=')).Trim(), fileName = rl.Substring(rl.IndexOf('=') + 1).Trim();
-
-                    if (fileType.EqualsIgnoreCase("cmd")) cmdName = fileName;
-                    if (fileType.EqualsIgnoreCase("cns")) cnsName = fileName;
-                    if (fileType.Length >= 2 && fileType.Substring(0, 2).EqualsIgnoreCase("st") && 
-                        !(fileType.ContainsIgnoreCase("stcommon"))) stNames.Add(fileName);
-                    if (fileType.EqualsIgnoreCase("anim")) airName = fileName;
-                }
-            }
-
-            readFile.Close();
-        }
-
 
         //Read cns file to look for the width of character
         private void ReadCns()
         {
-            readFile = new StreamReader(charDirPath + cnsName);
+            readFile = new StreamReader(charFilesInfo.charDirPath + charFilesInfo.cnsName);
 
             for (rl = readFile.ReadLine(); rl != null; rl = readFile.ReadLine())
             {
@@ -92,7 +64,7 @@ namespace MugenAITool
             // Variables
             int getValue = -1;
             bool getType = false;
-            readFile = new StreamReader(charDirPath + cmdName);
+            readFile = new StreamReader(charFilesInfo.charDirPath + charFilesInfo.cmdName);
 
             for (rl = readFile.ReadLine(); rl != null; rl = readFile.ReadLine())
             {
@@ -141,9 +113,9 @@ namespace MugenAITool
         // Read st file to find out related anim and movement for atk states
         private void ReadSt()
         {
-            foreach (string stName in stNames)
+            foreach (string stName in charFilesInfo.stNames)
             {
-                readFile = new StreamReader(charDirPath + stName);
+                readFile = new StreamReader(charFilesInfo.charDirPath + stName);
 
                 // Variables
                 string stateControllerType = "";
@@ -357,7 +329,7 @@ namespace MugenAITool
             int airNo = 0, totalTime = 0, x1 = -999, x2 = 999, y1 = -999, y2 = 999;
             bool clsn1 = false;
 
-            readFile = new StreamReader(charDirPath + airName);
+            readFile = new StreamReader(charFilesInfo.charDirPath + charFilesInfo.airName);
             for (rl = readFile.ReadLine(); rl != null; rl = readFile.ReadLine())
             {
                 rl = rl.RemoveMugenComment();
@@ -448,11 +420,11 @@ namespace MugenAITool
         private void CreateCsvFile()
         {
             // Create new directory if not exists
-            string toolTempDirPath = charDirPath + "\\MugenAITool";
+            string toolTempDirPath = targetCsvFilePath.Substring(0, targetCsvFilePath.LastIndexOf('\\') + 1);
             if (!Directory.Exists(toolTempDirPath)) Directory.CreateDirectory(toolTempDirPath);
 
             // Create CSV file
-            string csvName = targetCSVFilePath + ".csv";
+            string csvName = targetCsvFilePath + ".csv";
             writeFile = new StreamWriter(csvName, false, Encoding.UTF8);
 
             // Write into target file
@@ -535,9 +507,6 @@ namespace MugenAITool
             }
 
             writeFile.Close();
-
-            // Open the CSV file
-            Process.Start(csvName);
         }
     }
 }
