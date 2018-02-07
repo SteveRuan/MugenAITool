@@ -1,12 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace MugenAITool
@@ -14,8 +8,8 @@ namespace MugenAITool
     public partial class Main : Form
     {
         // Global variables
-        public string defName = "", cmdName = "", cnsName = "", airName = "", charDirPath = "", csvFilePath = "";
-        public Dictionary<int, List<int>> atkStorageTable;
+        CharFilesInfo charFilesInfo = new CharFilesInfo();
+        Dictionary<int, List<int>> atkStorageTable;
 
 
         public Main()
@@ -27,7 +21,7 @@ namespace MugenAITool
             }
         }
 
-        private void RH_Replace()
+        private void ReplaceHelper_Replace()
         {
             ReplaceHelper_resultText.Text = ReplaceHelper_templateText.Text;
             if (ReplaceHelper_X1.Text.Length > 0 && ReplaceHelper_V1.Text.Length > 0) ReplaceHelper_resultText.Text = ReplaceHelper_resultText.Text.Replace(ReplaceHelper_X1.Text, ReplaceHelper_V1.Text);
@@ -39,13 +33,16 @@ namespace MugenAITool
 
         private void ReplaceHelper_replaceButton_Click(object sender, EventArgs e)
         {
-            RH_Replace();
+            ReplaceHelper_Replace();
         }
 
         private void AtkStorage_createButton_Click(object sender, EventArgs e)
         {
-            AtkStorageManager ASM = new AtkStorageManager(AtkStorage_defText.Text, AtkStorage_csvText.Text);
-            ASM.AtkStorageMake();
+            AtkStorageManager atkStorageManager = new AtkStorageManager(charFilesInfo, AtkStorage_csvText.Text);
+            atkStorageManager.AtkStorageMake();
+
+            // Open the CSV file
+            Process.Start(AtkStorage_csvText.Text + ".csv");
         }
 
         private void AtkStorage_chooseDefButton_Click(object sender, EventArgs e)
@@ -56,7 +53,10 @@ namespace MugenAITool
                 string defPath = readDef.FileName;
                 string charName = defPath.Substring(defPath.LastIndexOf('\\') + 1, defPath.LastIndexOf('.') - defPath.LastIndexOf('\\') - 1);
                 AtkStorage_defText.Text = defPath;
-                AtkStorage_csvText.Text = defPath.Substring(0, defPath.LastIndexOf('\\')) + "\\MugenAITool\\" + charName + "AtkDatas";
+                AtkStorage_csvText.Text = defPath.Substring(0, defPath.LastIndexOf('\\')) + "\\MugenAITool\\" + charFilesInfo.charName + "AtkDatas";
+
+                // Update information
+                charFilesInfo.UpdateAfterChooseDefFile(defPath);
             }
         }
 
@@ -103,21 +103,18 @@ namespace MugenAITool
             }
         }
 
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-
-        private void label0_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void Mainpage_createButton_Click(object sender, EventArgs e)
         {
+            string tempCsvFilePath = charFilesInfo.charDirPath + charFilesInfo.charName + "temp";
+
             // Atk Storage collect datas from character
-            AtkStorageManager ASM = new AtkStorageManager(AtkStorage_defText.Text, AtkStorage_csvText.Text);
-            ASM.AtkStorageMake();
+            AtkStorageManager atkStorageManager = new AtkStorageManager(charFilesInfo, tempCsvFilePath);
+            atkStorageManager.AtkStorageMake();
 
             // Read CSV file 
             // atkStorageTable = 
@@ -133,6 +130,9 @@ namespace MugenAITool
             {
                 string defPath = readDef.FileName;
                 Mainpage_defText.Text = defPath;
+
+                // Update charFilesInfo
+                charFilesInfo.UpdateAfterChooseDefFile(defPath);
             }
         }
 

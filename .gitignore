@@ -2,7 +2,7 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/MugenAITool/.vs/MugenAITool/v14
 /MugenAITool/obj/Debug
 /MugenAITool/bin/Debug
 /.vs/MugenAITool/v14
+/.vs/MugenAITool/v15

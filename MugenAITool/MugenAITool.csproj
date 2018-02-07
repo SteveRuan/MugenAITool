@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="AtkStorageManager.cs" />
     <Compile Include="AISwitchManager.cs" />
+    <Compile Include="CharFilesInfo.cs" />
     <Compile Include="GuardManager.cs" />
     <Compile Include="RegularExpressions.cs" />
     <Compile Include="StringHelpers.cs" />

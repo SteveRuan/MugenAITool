@@ -44,3 +44,7 @@ A tool for all Mugen players to make an AI for specific character automatically.
 
 ### 2018.01.13:
 - Main: Created main page and renamed variables.
+
+### 2018.01.24:
+- Main: Renamed components and created new class CharFilesInfo to record the file information.
+- Atk Storage: Updated with CharFilesInfo class.
