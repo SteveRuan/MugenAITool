@@ -48,3 +48,9 @@ A tool for all Mugen players to make an AI for specific character automatically.
 ### 2018.01.24:
 - Main: Renamed components and created new class CharFilesInfo to record the file information.
 - Atk Storage: Updated with CharFilesInfo class.
+
+### 2018.02.11:
+- Main: First step of "one button create AI". Created new files and folder for AI. Try to link Atk Storage, AI Switch Manager and Guard Manager together.
+- CharFilesInfo: Bug fix, clear names of ST files to avoid when we use ReadDef function.
+- Atk Storage: Record down all triggers except for those contain "command"s when we read CMD file.
+- Guard Manager: Check "CanAirGuard".

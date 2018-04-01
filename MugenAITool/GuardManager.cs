@@ -45,6 +45,12 @@ namespace MugenAITool
                             rl = rl.Replace("{VariableNo}", variableNo);
                         }
 
+                        if (rl.ContainsIgnoreCase("{CanAirGuard}"))
+                        {
+                            rl = rl.Replace("{CanAirGuard}", "");
+                            // rl_tmp = rl_tmp.Replace("{CanAirGuard}", "Null ;");
+                        }
+
                         writeFile.WriteLine(rl);
                     }
 
@@ -101,7 +107,7 @@ namespace MugenAITool
                         skipGuardStateDef = false;
                     }
                 }
-                
+
                 // 
                 if (!skipGuardStateDef) writeFile.WriteLine(rl);
             }

@@ -20,6 +20,7 @@ namespace MugenAITool
             string rl;
             StreamReader readFile = new StreamReader(charDirPath + defName);
 
+            stNames.Clear();                                                            // Clear original stNames list
             for (rl = readFile.ReadLine(); rl != null; rl = readFile.ReadLine())
             {
                 rl = rl.RemoveMugenComment();
@@ -30,8 +31,8 @@ namespace MugenAITool
 
                     if (fileType.EqualsIgnoreCase("cmd")) cmdName = fileName;
                     if (fileType.EqualsIgnoreCase("cns")) cnsName = fileName;
-                    if (fileType.Length >= 2 && fileType.Substring(0, 2).EqualsIgnoreCase("st") &&
-                        !(fileType.ContainsIgnoreCase("stcommon"))) stNames.Add(fileName);
+                    if (fileType.Length >= 2 && fileType.Substring(0, 2).EqualsIgnoreCase("st")
+                        && !(fileType.ContainsIgnoreCase("stcommon"))) stNames.Add(fileName);
                     if (fileType.EqualsIgnoreCase("anim")) airName = fileName;
                     if (fileType.EqualsIgnoreCase("stcommon")) stcommonName = fileName;
                 }

@@ -38,13 +38,13 @@
             this.Mainpage_createButton = new System.Windows.Forms.Button();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.AtkStorage = new System.Windows.Forms.TabPage();
-            this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.AtkStorage_csvText = new System.Windows.Forms.TextBox();
             this.AtkStorage_defText = new System.Windows.Forms.TextBox();
             this.AtkStorage_chooseDefButton = new System.Windows.Forms.Button();
             this.AtkStorage_createButton = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
             this.AISwitchManager = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.AISwitch_numberUpDownButton = new System.Windows.Forms.NumericUpDown();
@@ -170,6 +170,7 @@
             // 
             this.Mainpage_checkedList.BackColor = System.Drawing.SystemColors.Control;
             this.Mainpage_checkedList.CheckOnClick = true;
+            this.Mainpage_checkedList.ColumnWidth = 250;
             this.Mainpage_checkedList.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Mainpage_checkedList.FormattingEnabled = true;
             this.Mainpage_checkedList.Items.AddRange(new object[] {
@@ -182,9 +183,10 @@
             "Neutral",
             "Guard",
             "Movement"});
-            this.Mainpage_checkedList.Location = new System.Drawing.Point(611, 66);
+            this.Mainpage_checkedList.Location = new System.Drawing.Point(6, 74);
+            this.Mainpage_checkedList.MultiColumn = true;
             this.Mainpage_checkedList.Name = "Mainpage_checkedList";
-            this.Mainpage_checkedList.Size = new System.Drawing.Size(159, 193);
+            this.Mainpage_checkedList.Size = new System.Drawing.Size(764, 67);
             this.Mainpage_checkedList.TabIndex = 2;
             // 
             // Mainpage_createButton
@@ -234,16 +236,6 @@
             this.AtkStorage.Size = new System.Drawing.Size(776, 496);
             this.AtkStorage.TabIndex = 1;
             this.AtkStorage.Text = "Atk Storage";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(623, 135);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(35, 18);
-            this.label7.TabIndex = 7;
-            this.label7.Text = ".csv";
             // 
             // label6
             // 
@@ -302,6 +294,16 @@
             this.AtkStorage_createButton.UseVisualStyleBackColor = true;
             this.AtkStorage_createButton.Click += new System.EventHandler(this.AtkStorage_createButton_Click);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(623, 135);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(35, 18);
+            this.label7.TabIndex = 7;
+            this.label7.Text = ".csv";
+            // 
             // AISwitchManager
             // 
             this.AISwitchManager.BackColor = System.Drawing.Color.Transparent;
@@ -353,13 +355,13 @@
             this.AISwitch_comboButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.AISwitch_comboButton.FormattingEnabled = true;
             this.AISwitch_comboButton.Items.AddRange(new object[] {
-            "Var",
-            "FVar"});
+            "var",
+            "fvar"});
             this.AISwitch_comboButton.Location = new System.Drawing.Point(6, 28);
             this.AISwitch_comboButton.Name = "AISwitch_comboButton";
             this.AISwitch_comboButton.Size = new System.Drawing.Size(58, 21);
             this.AISwitch_comboButton.TabIndex = 11;
-            this.AISwitch_comboButton.Text = "Var";
+            this.AISwitch_comboButton.Text = "var";
             // 
             // groupBox1
             // 
@@ -883,7 +885,6 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox Mainpage_defText;
         private System.Windows.Forms.Button Mainpage_chooseDefButton;
-        private System.Windows.Forms.CheckedListBox Mainpage_checkedList;
         private System.Windows.Forms.Button Mainpage_createButton;
         private System.Windows.Forms.TabControl tabControl;
         private System.Windows.Forms.TabPage AtkStorage;
@@ -948,6 +949,7 @@
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem notExistsToolStripMenuItem;
         private System.Windows.Forms.MenuStrip MainMenu;
+        private System.Windows.Forms.CheckedListBox Mainpage_checkedList;
     }
 }
 
