@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Diagnostics;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace MugenAITool
@@ -22,6 +25,53 @@ namespace MugenAITool
             for (int i = 0; i < Mainpage_checkedList.Items.Count; i += 1)
             {
                 Mainpage_checkedList.SetItemChecked(i, true);
+            }
+        }
+
+        private void SetLanguage(string Lang)
+        {
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(Lang);
+            ComponentResourceManager resources = new ComponentResourceManager(typeof(Main));
+            ApplyResourcesControl(resources, this);
+        }
+
+        private void ApplyResourcesControl(ComponentResourceManager resources, Control ParentCtl)
+        {
+            resources.ApplyResources(ParentCtl, ParentCtl.Name);
+            foreach (Control Ctl in ParentCtl.Controls)
+            {
+                resources.ApplyResources(Ctl, Ctl.Name);
+                if (Ctl is TextBox) continue;
+                else if (Ctl is MenuStrip)
+                {
+                    MenuStrip ms = (MenuStrip)Ctl;
+                    if (ms.Items.Count > 0)
+                    {
+                        foreach (ToolStripMenuItem Tsmi in ms.Items)
+                        {
+                            ApplyResourcesToolStripMenuItem(resources, Tsmi);
+                        }
+                    }
+                }
+                else if (Ctl is CheckedListBox)
+                {
+                    // +++
+                }
+            }
+        }
+
+        private void ApplyResourcesToolStripMenuItem(ComponentResourceManager resources, ToolStripMenuItem ParentTsmi)
+        {
+            if (ParentTsmi is ToolStripMenuItem)
+            {
+                resources.ApplyResources(ParentTsmi, ParentTsmi.Name);
+                if (ParentTsmi.DropDownItems.Count > 0)
+                {
+                    foreach (ToolStripMenuItem Tsmi in ParentTsmi.DropDownItems)
+                    {
+                        ApplyResourcesToolStripMenuItem(resources, Tsmi);
+                    }
+                }
             }
         }
 
@@ -130,6 +180,8 @@ namespace MugenAITool
         {
             // +++
         }
+
+        // ==============================================================================================
 
         private void ReplaceHelper_replaceButton_Click(object sender, EventArgs e)
         {
@@ -278,6 +330,21 @@ namespace MugenAITool
                 // Update charFilesInfo
                 charFilesInfo.UpdateAfterChooseDefFile(defPath);
             }
+        }
+
+        private void EnglishToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SetLanguage("");
+        }
+
+        private void SimplifiedChineseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SetLanguage("zh-Hans");
+        }
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+
         }
 
     }

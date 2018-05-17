@@ -54,3 +54,8 @@ A tool for all Mugen players to make an AI for specific character automatically.
 - CharFilesInfo: Bug fix, clear names of ST files to avoid when we use ReadDef function.
 - Atk Storage: Record down all triggers except for those contain "command"s when we read CMD file.
 - Guard Manager: Check "CanAirGuard".
+
+### 2018.02.17:
+- Main, Settings: First draft of multi-language, added Simplified Chinese.
+
+
