@@ -38,8 +38,8 @@ A tool for all Mugen players to make an AI for specific character automatically.
 
 ### 2017.12.31:
 - Main: Added menu bar (Language and Help submenu) and new tabs (Mainpage, AI Switch, InvincibleCounter, Punish, Stuffing, Pressuring, Combo, Neutral, Guard and Movement). Renamed components.
-- AI Switch Manager: First draft.
-- Guard Manager: First draft.
+- AI Switch Manager: Finished first draft.
+- Guard Manager: Finished first draft.
 - Mugen Template: Created new AI Switch and 2 Guard templates.
 
 ### 2018.01.13:
@@ -50,14 +50,17 @@ A tool for all Mugen players to make an AI for specific character automatically.
 - Atk Storage: Updated with CharFilesInfo class.
 
 ### 2018.02.11:
-- Main: First step of "one button create AI". Created new files and folder for AI. Try to link Atk Storage, AI Switch Manager and Guard Manager together.
+- Main: Finished first step of "one button create AI". Created new files and folder for AI. Try to link Atk Storage, AI Switch Manager and Guard Manager together.
 - CharFilesInfo: Bug fix, clear names of ST files to avoid when we use ReadDef function.
 - Atk Storage: Record down all triggers except for those contain "command"s when we read CMD file.
 - Guard Manager: Check "CanAirGuard".
 
 ### 2018.02.17:
-- Main, Settings: First draft of multi-language, added Simplified Chinese.
+- Main, Settings: Finished first draft of multi-language, added Simplified Chinese.
 
 ### 2018.10.01:
 - Main: Fixed translation bugs with check list.
 - Mugen Template: Set template files to "Always copy".
+
+### 2018.10.02:
+- Main, LanguageHandler: Modularized LanguageHandler.
