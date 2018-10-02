@@ -130,6 +130,33 @@
   <data name="Mainpage_chooseDefButton.Text" xml:space="preserve">
     <value>选择文件</value>
   </data>
+  <data name="Mainpage_checkedList.Items" xml:space="preserve">
+    <value>AI开关</value>
+  </data>
+  <data name="Mainpage_checkedList.Items1" xml:space="preserve">
+    <value>切反</value>
+  </data>
+  <data name="Mainpage_checkedList.Items2" xml:space="preserve">
+    <value>抓硬直</value>
+  </data>
+  <data name="Mainpage_checkedList.Items3" xml:space="preserve">
+    <value>插动</value>
+  </data>
+  <data name="Mainpage_checkedList.Items4" xml:space="preserve">
+    <value>压制</value>
+  </data>
+  <data name="Mainpage_checkedList.Items5" xml:space="preserve">
+    <value>连段</value>
+  </data>
+  <data name="Mainpage_checkedList.Items6" xml:space="preserve">
+    <value>立回</value>
+  </data>
+  <data name="Mainpage_checkedList.Items7" xml:space="preserve">
+    <value>防御</value>
+  </data>
+  <data name="Mainpage_checkedList.Items8" xml:space="preserve">
+    <value>移动</value>
+  </data>
   <data name="Mainpage_createButton.Text" xml:space="preserve">
     <value>创建AI</value>
   </data>
@@ -195,6 +222,12 @@
   </data>
   <data name="menuToolStripMenuItem.Text" xml:space="preserve">
     <value>菜单</value>
+  </data>
+  <data name="englishToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 22</value>
+  </data>
+  <data name="simplifiedChineseToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 22</value>
   </data>
   <data name="languageToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>45, 20</value>

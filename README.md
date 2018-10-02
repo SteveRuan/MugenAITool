@@ -58,4 +58,6 @@ A tool for all Mugen players to make an AI for specific character automatically.
 ### 2018.02.17:
 - Main, Settings: First draft of multi-language, added Simplified Chinese.
 
-
+### 2018.10.01:
+- Main: Fixed translation bugs with check list.
+- Mugen Template: Set template files to "Always copy".

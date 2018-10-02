@@ -17,8 +17,7 @@ namespace MugenAITool
         CharFilesInfo charFilesInfo = new CharFilesInfo();
         Dictionary<int, string> commandTriggers;
         List <List<int>> atkStorageTable;
-
-
+        
         public Main()
         {
             InitializeComponent();
@@ -32,7 +31,9 @@ namespace MugenAITool
         {
             Thread.CurrentThread.CurrentUICulture = new CultureInfo(Lang);
             ComponentResourceManager resources = new ComponentResourceManager(typeof(Main));
+            
             ApplyResourcesControl(resources, this);
+            ApplyResourcesCheckedListBox(resources, Mainpage_checkedList);
         }
 
         private void ApplyResourcesControl(ComponentResourceManager resources, Control ParentCtl)
@@ -42,7 +43,7 @@ namespace MugenAITool
             {
                 resources.ApplyResources(Ctl, Ctl.Name);
                 if (Ctl is TextBox) continue;
-                else if (Ctl is MenuStrip)
+                if (Ctl is MenuStrip)
                 {
                     MenuStrip ms = (MenuStrip)Ctl;
                     if (ms.Items.Count > 0)
@@ -53,9 +54,9 @@ namespace MugenAITool
                         }
                     }
                 }
-                else if (Ctl is CheckedListBox)
+                else
                 {
-                    // +++
+                    ApplyResourcesControl(resources, Ctl);
                 }
             }
         }
@@ -72,6 +73,38 @@ namespace MugenAITool
                         ApplyResourcesToolStripMenuItem(resources, Tsmi);
                     }
                 }
+            }
+        }
+
+        private void ApplyResourcesCheckedListBox(ComponentResourceManager resources, CheckedListBox Clb)
+        {
+            // Record the status of items in checked list box
+            int CheckedFlag = 0;
+            for (int i = 0; i < Clb.Items.Count; i += 1)
+            {
+                if (Clb.GetItemChecked(i)) CheckedFlag += (int)Math.Pow(2, i);
+            }
+
+            // Clear the checked list box and refill it after translation
+            Clb.Items.Clear();
+            Clb.Items.AddRange(
+                new object[] {
+                    resources.GetString("Mainpage_checkedList.Items"),
+                    resources.GetString("Mainpage_checkedList.Items1"),
+                    resources.GetString("Mainpage_checkedList.Items2"),
+                    resources.GetString("Mainpage_checkedList.Items3"),
+                    resources.GetString("Mainpage_checkedList.Items4"),
+                    resources.GetString("Mainpage_checkedList.Items5"),
+                    resources.GetString("Mainpage_checkedList.Items6"),
+                    resources.GetString("Mainpage_checkedList.Items7"),
+                    resources.GetString("Mainpage_checkedList.Items8")
+                });
+
+            // Recover the status of items in checked list box
+            for (int i = 0; i < Clb.Items.Count; i += 1)
+            {
+                Clb.SetItemChecked(i, (CheckedFlag % 2 == 1));
+                CheckedFlag /= 2;
             }
         }
 
