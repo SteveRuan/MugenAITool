@@ -600,6 +600,7 @@
             // 
             resources.ApplyResources(this.MainMenu, "MainMenu");
             this.MainMenu.BackColor = System.Drawing.Color.Transparent;
+            this.MainMenu.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.MainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuToolStripMenuItem,
             this.languageToolStripMenuItem,

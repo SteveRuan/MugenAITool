@@ -117,17 +117,32 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="&gt;&gt;ReplaceHelper_X4.Name" xml:space="preserve">
+    <value>ReplaceHelper_X4</value>
+  </data>
+  <data name="&gt;&gt;AtkStorage_csvText.Name" xml:space="preserve">
+    <value>AtkStorage_csvText</value>
+  </data>
   <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
     <value>14</value>
+  </data>
+  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="Guard_chooseCmdButton.Text" xml:space="preserve">
     <value>Choose file</value>
   </data>
+  <data name="&gt;&gt;ReplaceHelper_X3.Parent" xml:space="preserve">
+    <value>ReplaceHelper</value>
+  </data>
   <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;AtkStorage_defText.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;ReplaceHelper_X4.Parent" xml:space="preserve">
+    <value>ReplaceHelper</value>
   </data>
   <data name="label7.Text" xml:space="preserve">
     <value>.csv</value>
@@ -135,11 +150,25 @@
   <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="&gt;&gt;ReplaceHelper_V2.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
   <data name="&gt;&gt;label10.Name" xml:space="preserve">
     <value>label10</value>
   </data>
   <data name="&gt;&gt;ReplaceHelper_X2.ZOrder" xml:space="preserve">
     <value>11</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="label12.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="AISwitch_chooseCmdButton.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="AISwitch_comboButton.Text" xml:space="preserve">
+    <value>var</value>
   </data>
   <data name="&gt;&gt;ReplaceHelper_resultText.Name" xml:space="preserve">
     <value>ReplaceHelper_resultText</value>
@@ -147,47 +176,132 @@
   <data name="AtkStorage_createButton.Text" xml:space="preserve">
     <value>Create csv file</value>
   </data>
-  <data name="exitToolStripMenuItem.Text" xml:space="preserve">
-    <value>Exit (Alt+F4)</value>
+  <data name="ReplaceHelper_X2.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1045, 647</value>
+  </data>
+  <data name="&gt;&gt;ReplaceHelper_X4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="AISwitch_cmdText.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="AtkStorage_chooseDefButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>840, 38</value>
+  </data>
+  <data name="PressuringManager.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="InvincibleCounterManager.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
   </data>
   <data name="&gt;&gt;AISwitch_comboButton.Name" xml:space="preserve">
     <value>AISwitch_comboButton</value>
   </data>
+  <data name="ReplaceHelper_X1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 415</value>
+  </data>
   <data name="&gt;&gt;AtkStorage_csvText.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;MovementManager.Name" xml:space="preserve">
-    <value>MovementManager</value>
+  <data name="AtkStorage_defText.Size" type="System.Drawing.Size, System.Drawing">
+    <value>823, 26</value>
   </data>
-  <data name="simplifiedChineseToolStripMenuItem.Text" xml:space="preserve">
-    <value>简体中文</value>
+  <data name="label10.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="groupBox1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="ReplaceHelper_replaceButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="PressuringManager.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 25</value>
+  </data>
+  <data name="&gt;&gt;ReplaceHelper_tempText.Parent" xml:space="preserve">
+    <value>ReplaceHelper</value>
   </data>
   <data name="NeutralManager.Text" xml:space="preserve">
     <value>Neutral (X)</value>
   </data>
+  <data name="Mainpage.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="&gt;&gt;AtkStorage_createButton.ZOrder" xml:space="preserve">
     <value>5</value>
+  </data>
+  <data name="InvincibleCounterManager.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="AtkStorage_defText.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 38</value>
+  </data>
+  <data name="PunishManager.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
   </data>
   <data name="&gt;&gt;Guard_stCommonText.Name" xml:space="preserve">
     <value>Guard_stCommonText</value>
   </data>
+  <data name="Guard_chooseCmdButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>187, 27</value>
+  </data>
+  <data name="&gt;&gt;label4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tabControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1045, 602</value>
+  </data>
+  <data name="NeutralManager.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 25</value>
+  </data>
   <data name="&gt;&gt;MovementManager.Type" xml:space="preserve">
     <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="&gt;&gt;Mainpage.Name" xml:space="preserve">
     <value>Mainpage</value>
   </data>
+  <data name="StuffingManager.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="ReplaceHelper_V1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
   <data name="&gt;&gt;ReplaceHelper_X2.Parent" xml:space="preserve">
     <value>ReplaceHelper</value>
   </data>
-  <data name="&gt;&gt;ReplaceHelper_V2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="AISwitch_chooseCmdButton.Text" xml:space="preserve">
+    <value>Choose file</value>
   </data>
-  <data name="&gt;&gt;GuardManager.ZOrder" xml:space="preserve">
-    <value>9</value>
+  <data name="Mainpage_createButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 48pt</value>
+  </data>
+  <data name="MovementManager.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="Mainpage_chooseDefButton.Text" xml:space="preserve">
+    <value>Choose file</value>
+  </data>
+  <data name="label11.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="label11.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="ReplaceHelper_templateText.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;Mainpage_defText.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="MovementManager.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
   </data>
   <data name="&gt;&gt;ReplaceHelper_X3.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -195,17 +309,32 @@
   <data name="Mainpage_checkedList.Items7" xml:space="preserve">
     <value>Guard</value>
   </data>
+  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>320, 63</value>
+  </data>
   <data name="&gt;&gt;AISwitch_radioButton2.Parent" xml:space="preserve">
     <value>groupBox1</value>
   </data>
+  <data name="AtkStorage_defText.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
   <data name="ReplaceHelper_resultText.Text" xml:space="preserve">
     <value />
+  </data>
+  <data name="AISwitch_numberUpDownButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>93, 33</value>
   </data>
   <data name="MovementManager.Text" xml:space="preserve">
     <value>Movement (X)</value>
   </data>
   <data name="&gt;&gt;AtkStorage_defText.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ReplaceHelper_X1.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="AISwitch_radioButton1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 37</value>
   </data>
   <data name="&gt;&gt;AtkStorage_chooseDefButton.Name" xml:space="preserve">
     <value>AtkStorage_chooseDefButton</value>
@@ -216,8 +345,8 @@
   <data name="&gt;&gt;PressuringManager.Name" xml:space="preserve">
     <value>PressuringManager</value>
   </data>
-  <data name="&gt;&gt;ReplaceHelper_V3.ZOrder" xml:space="preserve">
-    <value>10</value>
+  <data name="AtkStorage_chooseDefButton.Text" xml:space="preserve">
+    <value>Choose file</value>
   </data>
   <data name="&gt;&gt;AISwitch_numberUpDownButton.Parent" xml:space="preserve">
     <value>groupBox2</value>
@@ -225,11 +354,26 @@
   <data name="&gt;&gt;exitToolStripMenuItem.Name" xml:space="preserve">
     <value>exitToolStripMenuItem</value>
   </data>
-  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
-    <value>ReplaceHelper</value>
+  <data name="Guard_chooseStCommonButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>187, 27</value>
+  </data>
+  <data name="ReplaceHelper_X4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>308, 415</value>
+  </data>
+  <data name="&gt;&gt;PressuringManager.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;ReplaceHelper_V1.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Mainpage_checkedList.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="AISwitch_numberUpDownButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 127</value>
   </data>
   <data name="label11.Text" xml:space="preserve">
     <value>Choose the StCommon file from the character</value>
@@ -237,29 +381,82 @@
   <data name="&gt;&gt;ComboManager.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
+  <data name="ComboManager.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1037, 573</value>
+  </data>
+  <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>320, 63</value>
+  </data>
+  <data name="&gt;&gt;Mainpage_defText.Name" xml:space="preserve">
+    <value>Mainpage_defText</value>
+  </data>
   <data name="&gt;&gt;label5.Parent" xml:space="preserve">
     <value>AtkStorage</value>
   </data>
   <data name="AISwitch_radioButton2.Text" xml:space="preserve">
     <value>For 1.0+ versions</value>
   </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>X1                     X2                     X3                    X4                    X5</value>
+  <data name="Mainpage_checkedList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1017, 54</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Mugen AI Tool</value>
+  <data name="&gt;&gt;AISwitch_numberUpDownButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>354, 25</value>
   </data>
   <data name="&gt;&gt;ReplaceHelper_templateText.Type" xml:space="preserve">
     <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="MovementManager.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="&gt;&gt;simplifiedChineseToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="GuardManager.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
   <data name="&gt;&gt;Mainpage_checkedList.ZOrder" xml:space="preserve">
     <value>3</value>
+  </data>
+  <data name="groupBox2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAICAEAAAAAADoAgAAFgAAACgAAAAgAAAAQAAAAAEABAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAACAAACAAAAAgIAAgAAAAIAAgACAgAAAwMDAAICAgAAAAP8AAP8AAAD//wD/AAAA/wD/AP//
+        AAD///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACIiIgAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAA
+        AAAACAAAAAAAAAAAAAAAAACIgAgAAAAAAAAAAAAIgIAAiIAIAACAAAAAAAAAiAAIAIeAAAAACAAAAAAA
+        CIBwAAiHiAAAgACAAAAAAAgHdwiIiIiICIgACAAAAAAAf3d4j///CId4gAgAAAAAAAd3d/d3d/8HeACA
+        AAAAAAAAdwd3eIiH8IAAgAAAAAiIB3d3dwAIiH+IAIiIgACAAAfwdwCIiAiPCAAAAIAIAAB/B3cHAAiI
+        h/iAAACACAd3fwdw8H9wgIf4iIgAgAgH938IcPCA8ICH+HeIAIAIB3d/CHDwiHCAd/iIiACACAAAfwh3
+        /wAHB3f4gAAAgAAAAAfwhw//8Ad/iACAAAAAAAAH8Ih3AAd3d4gAgAAAAAAAAH8Ih3d3dweAAIAAAAAA
+        AAd/8AiIdwd3eAAIAAAAAAB/d3/wAAD3h3iACAAAAAAIB/cHf///dwh4AIAAAAAACIBwAAd3dwAAgAgA
+        AAAAAACIAIAAd3AIAACAAAAAAAAACIgAAH9wCAAIAAAAAAAAAAAAAAB3cAgAAAAAAAAAAAAAAAAAAAAI
+        AAAAAAAAAAAAAAAACIiIiAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///////wP///8D///+A////gP//4Y
+        Dn/8AAQ/+AAAH/gAAA/4AAAP/AAAH/4AAB/gAAABwAAAAYAAAAGAAAABgAAAAYAAAAGAAAAB/AAAH/wA
+        AB/+AAAf/AAAD/gAAA/4AAAf+AAAP/wYDH/+OA7///gP///4D///+A///////w==
+</value>
+  </data>
+  <data name="AISwitch_chooseCmdButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>187, 27</value>
+  </data>
+  <data name="&gt;&gt;AISwitch_cmdText.Parent" xml:space="preserve">
+    <value>AISwitchManager</value>
+  </data>
+  <data name="ReplaceHelper_resultText.Location" type="System.Drawing.Point, System.Drawing">
+    <value>547, 36</value>
+  </data>
+  <data name="groupBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
   </data>
   <data name="&gt;&gt;ReplaceHelper_V2.Name" xml:space="preserve">
     <value>ReplaceHelper_V2</value>
   </data>
-  <data name="Guard_addButton.Text" xml:space="preserve">
-    <value>Add Guard</value>
+  <data name="groupBox2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
   </data>
   <data name="&gt;&gt;Mainpage_chooseDefButton.Name" xml:space="preserve">
     <value>Mainpage_chooseDefButton</value>
@@ -267,17 +464,44 @@
   <data name="&gt;&gt;label11.Name" xml:space="preserve">
     <value>label11</value>
   </data>
-  <data name="&gt;&gt;AISwitch_chooseCmdButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="AtkStorage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 25</value>
   </data>
-  <data name="&gt;&gt;Guard_chooseStCommonButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>122, 25</value>
+  </data>
+  <data name="ReplaceHelper.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="groupBox1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="label0.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="AtkStorage_csvText.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="ReplaceHelper_tempText.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Mainpage.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
   </data>
   <data name="ReplaceHelper_templateText.Text" xml:space="preserve">
     <value />
   </data>
+  <data name="ReplaceHelper_V3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="groupBox1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
   <data name="&gt;&gt;ReplaceHelper_replaceButton.ZOrder" xml:space="preserve">
     <value>19</value>
+  </data>
+  <data name="AISwitch_cmdText.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
   </data>
   <data name="&gt;&gt;PunishManager.Parent" xml:space="preserve">
     <value>tabControl</value>
@@ -285,11 +509,23 @@
   <data name="&gt;&gt;label7.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="&gt;&gt;label7.Parent" xml:space="preserve">
     <value>AtkStorage</value>
   </data>
+  <data name="AtkStorage_chooseDefButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>187, 27</value>
+  </data>
+  <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>22, 15</value>
+  </data>
   <data name="&gt;&gt;AISwitch_addButton.Name" xml:space="preserve">
     <value>AISwitch_addButton</value>
+  </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;label10.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -297,44 +533,95 @@
   <data name="&gt;&gt;ComboManager.Parent" xml:space="preserve">
     <value>tabControl</value>
   </data>
-  <data name="&gt;&gt;ReplaceHelper_X5.Name" xml:space="preserve">
-    <value>ReplaceHelper_X5</value>
+  <data name="Guard_addButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 306</value>
+  </data>
+  <data name="&gt;&gt;Guard_stCommonText.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="NeutralManager.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="label7.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt</value>
   </data>
   <data name="&gt;&gt;Guard_cmdText.Parent" xml:space="preserve">
     <value>GuardManager</value>
   </data>
+  <data name="groupBox2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
   <data name="&gt;&gt;AISwitch_radioButton2.Type" xml:space="preserve">
     <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;AISwitch_comboButton.Parent" xml:space="preserve">
-    <value>groupBox2</value>
+  <data name="NeutralManager.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="Mainpage_createButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1019, 260</value>
   </data>
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
     <value>17</value>
   </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>18</value>
+  <data name="label11.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 127</value>
   </data>
-  <data name="&gt;&gt;ReplaceHelper_X5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="ReplaceHelper_replaceButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 21.75pt</value>
   </data>
-  <data name="&gt;&gt;MovementManager.Parent" xml:space="preserve">
-    <value>tabControl</value>
+  <data name="ReplaceHelper_V1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 464</value>
   </data>
-  <data name="&gt;&gt;ReplaceHelper_replaceButton.Name" xml:space="preserve">
-    <value>ReplaceHelper_replaceButton</value>
+  <data name="label9.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="AISwitch_addButton.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="AISwitch_radioButton1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="AISwitchManager.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="Guard_stCommonText.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
   </data>
   <data name="&gt;&gt;ReplaceHelper_X1.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <data name="&gt;&gt;helpToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;label11.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label9.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
   </data>
   <data name="Mainpage_checkedList.Items4" xml:space="preserve">
     <value>Pressuring</value>
   </data>
-  <data name="&gt;&gt;ReplaceHelper.Name" xml:space="preserve">
-    <value>ReplaceHelper</value>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>743, 15</value>
+  </data>
+  <data name="&gt;&gt;tabControl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="label3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="ReplaceHelper_replaceButton.Text" xml:space="preserve">
+    <value>Replace</value>
+  </data>
+  <data name="&gt;&gt;helpToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ReplaceHelper_V3.Name" xml:space="preserve">
+    <value>ReplaceHelper_V3</value>
+  </data>
+  <data name="ReplaceHelper.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
   </data>
   <data name="&gt;&gt;AISwitch_addButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -342,20 +629,74 @@
   <data name="&gt;&gt;ReplaceHelper_V2.Parent" xml:space="preserve">
     <value>ReplaceHelper</value>
   </data>
+  <data name="label12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>347, 25</value>
+  </data>
   <data name="Mainpage_checkedList.Items1" xml:space="preserve">
     <value>InvincibleCounter</value>
+  </data>
+  <data name="InvincibleCounterManager.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1037, 573</value>
+  </data>
+  <data name="AISwitch_radioButton1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 21</value>
+  </data>
+  <data name="&gt;&gt;label12.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="NeutralManager.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1037, 573</value>
+  </data>
+  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="ReplaceHelper_V2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="AtkStorage_createButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 48pt</value>
+  </data>
+  <data name="PressuringManager.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="Mainpage_defText.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
   </data>
   <data name="&gt;&gt;ReplaceHelper_V5.Parent" xml:space="preserve">
     <value>ReplaceHelper</value>
   </data>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>177, 25</value>
+  </data>
   <data name="&gt;&gt;Guard_addButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="AISwitch_cmdText.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 38</value>
   </data>
-  <data name="&gt;&gt;AISwitch_radioButton1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;ReplaceHelper_V4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MainMenu.Name" xml:space="preserve">
+    <value>MainMenu</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="Guard_stCommonText.Size" type="System.Drawing.Size, System.Drawing">
+    <value>823, 26</value>
+  </data>
+  <data name="exitToolStripMenuItem.Text" xml:space="preserve">
+    <value>Exit (Alt+F4)</value>
+  </data>
+  <data name="Guard_chooseStCommonButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>840, 153</value>
+  </data>
+  <data name="AtkStorage_csvText.Size" type="System.Drawing.Size, System.Drawing">
+    <value>823, 26</value>
+  </data>
+  <data name="MainMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1045, 28</value>
   </data>
   <data name="&gt;&gt;AISwitchManager.Type" xml:space="preserve">
     <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -363,32 +704,77 @@
   <data name="&gt;&gt;ReplaceHelper_X1.Parent" xml:space="preserve">
     <value>ReplaceHelper</value>
   </data>
+  <data name="label11.Size" type="System.Drawing.Size, System.Drawing">
+    <value>407, 25</value>
+  </data>
   <data name="&gt;&gt;ReplaceHelper_V4.Name" xml:space="preserve">
     <value>ReplaceHelper_V4</value>
   </data>
-  <data name="&gt;&gt;Guard_stCommonText.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="ReplaceHelper_tempText.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="&gt;&gt;ReplaceHelper_X2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MovementManager.Name" xml:space="preserve">
+    <value>MovementManager</value>
+  </data>
+  <data name="label9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 12</value>
+  </data>
+  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;languageToolStripMenuItem.Name" xml:space="preserve">
+    <value>languageToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;PressuringManager.Parent" xml:space="preserve">
+    <value>tabControl</value>
+  </data>
+  <data name="AtkStorage_createButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1019, 260</value>
   </data>
   <data name="englishToolStripMenuItem.Text" xml:space="preserve">
     <value>English</value>
   </data>
-  <data name="&gt;&gt;Mainpage_defText.Name" xml:space="preserve">
-    <value>Mainpage_defText</value>
+  <data name="StuffingManager.Text" xml:space="preserve">
+    <value>Stuffing (X)</value>
   </data>
-  <data name="&gt;&gt;Guard_cmdText.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="ComboManager.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="AISwitchManager.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1037, 573</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
+    <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;AISwitch_radioButton1.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;label11.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="AISwitch_comboButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="label8.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="Mainpage_chooseDefButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
   </data>
   <data name="&gt;&gt;ReplaceHelper_V1.Name" xml:space="preserve">
     <value>ReplaceHelper_V1</value>
   </data>
+  <data name="label9.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="englishToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 26</value>
+  </data>
   <data name="Guard_chooseStCommonButton.Text" xml:space="preserve">
     <value>Choose file</value>
+  </data>
+  <data name="exitToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>173, 26</value>
   </data>
   <data name="&gt;&gt;AISwitch_chooseCmdButton.Parent" xml:space="preserve">
     <value>AISwitchManager</value>
@@ -408,11 +794,20 @@
   <data name="Mainpage_checkedList.Items" xml:space="preserve">
     <value>AISwitch</value>
   </data>
+  <data name="AISwitch_radioButton2.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
   <data name="GuardManager.Text" xml:space="preserve">
     <value>Guard</value>
   </data>
+  <data name="label0.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 9</value>
+  </data>
   <data name="&gt;&gt;ReplaceHelper_resultText.Type" xml:space="preserve">
     <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="AtkStorage_csvText.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;notExistsToolStripMenuItem.Name" xml:space="preserve">
     <value>notExistsToolStripMenuItem</value>
@@ -420,8 +815,11 @@
   <data name="&gt;&gt;InvincibleCounterManager.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="&gt;&gt;AtkStorage.Parent" xml:space="preserve">
-    <value>tabControl</value>
+  <data name="Guard_chooseCmdButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="AtkStorage_createButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
   </data>
   <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
     <value>AISwitchManager</value>
@@ -429,17 +827,32 @@
   <data name="&gt;&gt;groupBox1.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;AISwitch_comboButton.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
   <data name="AtkStorage.Text" xml:space="preserve">
     <value>Atk Storage</value>
   </data>
   <data name="ReplaceHelper_X3.Text" xml:space="preserve">
     <value>TT</value>
   </data>
-  <data name="&gt;&gt;ComboManager.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="AISwitch_radioButton1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="Mainpage_checkedList.Items3" xml:space="preserve">
-    <value>Stuffing</value>
+  <data name="ReplaceHelper.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1037, 573</value>
+  </data>
+  <data name="Guard_addButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 48pt</value>
+  </data>
+  <data name="Mainpage_chooseDefButton.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="AISwitch_comboButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="AtkStorage_chooseDefButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
   </data>
   <data name="&gt;&gt;Guard_cmdText.ZOrder" xml:space="preserve">
     <value>4</value>
@@ -450,11 +863,14 @@
   <data name="PunishManager.Text" xml:space="preserve">
     <value>Punish (X)</value>
   </data>
-  <data name="&gt;&gt;NeutralManager.Parent" xml:space="preserve">
-    <value>tabControl</value>
+  <data name="label0.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
   </data>
-  <data name="Mainpage_checkedList.Items5" xml:space="preserve">
-    <value>Combo</value>
+  <data name="Guard_cmdText.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="PunishManager.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
   </data>
   <data name="&gt;&gt;Mainpage.Parent" xml:space="preserve">
     <value>tabControl</value>
@@ -462,53 +878,137 @@
   <data name="&gt;&gt;AISwitch_cmdText.Name" xml:space="preserve">
     <value>AISwitch_cmdText</value>
   </data>
+  <data name="Mainpage_defText.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 38</value>
+  </data>
+  <data name="Mainpage_checkedList.Items5" xml:space="preserve">
+    <value>Combo</value>
+  </data>
+  <data name="MovementManager.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 25</value>
+  </data>
   <data name="&gt;&gt;Mainpage_createButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;InvincibleCounterManager.Parent" xml:space="preserve">
     <value>tabControl</value>
   </data>
-  <data name="&gt;&gt;ReplaceHelper_X4.ZOrder" xml:space="preserve">
-    <value>8</value>
+  <data name="label10.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;label4.Name" xml:space="preserve">
+    <value>label4</value>
+  </data>
+  <data name="&gt;&gt;label9.Name" xml:space="preserve">
+    <value>label9</value>
+  </data>
+  <data name="notExistsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 26</value>
+  </data>
+  <data name="Guard_cmdText.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="ReplaceHelper_resultText.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="AtkStorage_chooseDefButton.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
   </data>
   <data name="helpToolStripMenuItem.Text" xml:space="preserve">
     <value>Help</value>
   </data>
-  <data name="&gt;&gt;exitToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="PressuringManager.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1037, 573</value>
+  </data>
+  <data name="ReplaceHelper_X3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="AISwitch_radioButton2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="AISwitch_radioButton1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
   <data name="&gt;&gt;label3.Parent" xml:space="preserve">
     <value>ReplaceHelper</value>
   </data>
-  <data name="&gt;&gt;ReplaceHelper_X2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="label7.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
   </data>
-  <data name="&gt;&gt;notExistsToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="ReplaceHelper.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 25</value>
   </data>
-  <data name="&gt;&gt;InvincibleCounterManager.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
+    <value>ReplaceHelper</value>
+  </data>
+  <data name="&gt;&gt;label12.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="AtkStorage_csvText.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 153</value>
+  </data>
+  <data name="ReplaceHelper.Text" xml:space="preserve">
+    <value>Replace Helper</value>
   </data>
   <data name="&gt;&gt;MainMenu.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;Mainpage_createButton.Parent" xml:space="preserve">
-    <value>Mainpage</value>
+  <data name="AISwitch_radioButton2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="tabControl.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;label10.Parent" xml:space="preserve">
     <value>GuardManager</value>
   </data>
+  <data name="&gt;&gt;Guard_addButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="label1.Text" xml:space="preserve">
     <value>After replace</value>
+  </data>
+  <data name="&gt;&gt;tabControl.Name" xml:space="preserve">
+    <value>tabControl</value>
   </data>
   <data name="&gt;&gt;Mainpage_checkedList.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckedListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="Mainpage_defText.Size" type="System.Drawing.Size, System.Drawing">
+    <value>823, 26</value>
+  </data>
+  <data name="&gt;&gt;menuToolStripMenuItem.Name" xml:space="preserve">
+    <value>menuToolStripMenuItem</value>
+  </data>
+  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>390, 25</value>
+  </data>
+  <data name="ReplaceHelper_X2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="Mainpage_chooseDefButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>187, 27</value>
+  </data>
+  <data name="&gt;&gt;AtkStorage_defText.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
   <data name="&gt;&gt;label6.Parent" xml:space="preserve">
     <value>AtkStorage</value>
   </data>
-  <data name="&gt;&gt;ReplaceHelper_X4.Parent" xml:space="preserve">
-    <value>ReplaceHelper</value>
+  <data name="Guard_chooseCmdButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>840, 38</value>
+  </data>
+  <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 222</value>
+  </data>
+  <data name="ComboManager.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 25</value>
+  </data>
+  <data name="Mainpage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1037, 573</value>
+  </data>
+  <data name="Guard_stCommonText.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 153</value>
   </data>
   <data name="&gt;&gt;ReplaceHelper_X2.Name" xml:space="preserve">
     <value>ReplaceHelper_X2</value>
@@ -516,26 +1016,56 @@
   <data name="&gt;&gt;ReplaceHelper_X1.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label9.Parent" xml:space="preserve">
-    <value>AISwitchManager</value>
+  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label7.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;AISwitch_cmdText.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;ReplaceHelper_X5.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <data name="&gt;&gt;Mainpage_checkedList.Name" xml:space="preserve">
     <value>Mainpage_checkedList</value>
-  </data>
-  <data name="&gt;&gt;label12.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label11.Parent" xml:space="preserve">
     <value>GuardManager</value>
   </data>
-  <data name="&gt;&gt;ReplaceHelper_V3.Name" xml:space="preserve">
-    <value>ReplaceHelper_V3</value>
+  <data name="&gt;&gt;ReplaceHelper_V1.Parent" xml:space="preserve">
+    <value>ReplaceHelper</value>
   </data>
-  <data name="&gt;&gt;simplifiedChineseToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="ReplaceHelper_X5.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="Mainpage_checkedList.ColumnWidth" type="System.Int32, mscorlib">
+    <value>250</value>
+  </data>
+  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>541, 389</value>
+  </data>
+  <data name="ReplaceHelper_X2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>108, 415</value>
+  </data>
+  <data name="AISwitch_radioButton2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>93, 37</value>
+  </data>
+  <data name="&gt;&gt;AISwitch_chooseCmdButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>ReplaceHelper</value>
+  </data>
+  <data name="AISwitch_radioButton2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 12</value>
   </data>
   <data name="&gt;&gt;ReplaceHelper.Parent" xml:space="preserve">
     <value>tabControl</value>
@@ -543,20 +1073,50 @@
   <data name="&gt;&gt;label10.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="&gt;&gt;ReplaceHelper_V5.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="label4.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;ReplaceHelper_X4.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="Mainpage_defText.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>336, 222</value>
   </data>
   <data name="menuToolStripMenuItem.Text" xml:space="preserve">
     <value>Menu</value>
   </data>
+  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ReplaceHelper_X5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>408, 415</value>
+  </data>
   <data name="&gt;&gt;helpToolStripMenuItem.Name" xml:space="preserve">
     <value>helpToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;AISwitch_radioButton1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;ReplaceHelper_X3.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
+  <data name="StuffingManager.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1037, 573</value>
+  </data>
+  <data name="&gt;&gt;MovementManager.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
   <data name="&gt;&gt;Mainpage_defText.Parent" xml:space="preserve">
     <value>Mainpage</value>
+  </data>
+  <data name="simplifiedChineseToolStripMenuItem.Text" xml:space="preserve">
+    <value>简体中文</value>
   </data>
   <data name="&gt;&gt;AISwitch_radioButton1.Parent" xml:space="preserve">
     <value>groupBox1</value>
@@ -564,11 +1124,14 @@
   <data name="&gt;&gt;StuffingManager.Name" xml:space="preserve">
     <value>StuffingManager</value>
   </data>
-  <data name="&gt;&gt;AtkStorage_createButton.Parent" xml:space="preserve">
-    <value>AtkStorage</value>
+  <data name="simplifiedChineseToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 26</value>
   </data>
-  <data name="&gt;&gt;MovementManager.ZOrder" xml:space="preserve">
-    <value>10</value>
+  <data name="AtkStorage_defText.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="AISwitch_cmdText.Size" type="System.Drawing.Size, System.Drawing">
+    <value>823, 26</value>
   </data>
   <data name="&gt;&gt;AtkStorage_csvText.ZOrder" xml:space="preserve">
     <value>2</value>
@@ -582,65 +1145,110 @@
   <data name="&gt;&gt;AISwitch_numberUpDownButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="Mainpage_chooseDefButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>840, 38</value>
+  </data>
   <data name="&gt;&gt;AtkStorage.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="&gt;&gt;label11.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        AAABAAEAICAEAAAAAADoAgAAFgAAACgAAAAgAAAAQAAAAAEABAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAACAAACAAAAAgIAAgAAAAIAAgACAgAAAwMDAAICAgAAAAP8AAP8AAAD//wD/AAAA/wD/AP//
-        AAD///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACIiIgAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAA
-        AAAACAAAAAAAAAAAAAAAAACIgAgAAAAAAAAAAAAIgIAAiIAIAACAAAAAAAAAiAAIAIeAAAAACAAAAAAA
-        CIBwAAiHiAAAgACAAAAAAAgHdwiIiIiICIgACAAAAAAAf3d4j///CId4gAgAAAAAAAd3d/d3d/8HeACA
-        AAAAAAAAdwd3eIiH8IAAgAAAAAiIB3d3dwAIiH+IAIiIgACAAAfwdwCIiAiPCAAAAIAIAAB/B3cHAAiI
-        h/iAAACACAd3fwdw8H9wgIf4iIgAgAgH938IcPCA8ICH+HeIAIAIB3d/CHDwiHCAd/iIiACACAAAfwh3
-        /wAHB3f4gAAAgAAAAAfwhw//8Ad/iACAAAAAAAAH8Ih3AAd3d4gAgAAAAAAAAH8Ih3d3dweAAIAAAAAA
-        AAd/8AiIdwd3eAAIAAAAAAB/d3/wAAD3h3iACAAAAAAIB/cHf///dwh4AIAAAAAACIBwAAd3dwAAgAgA
-        AAAAAACIAIAAd3AIAACAAAAAAAAACIgAAH9wCAAIAAAAAAAAAAAAAAB3cAgAAAAAAAAAAAAAAAAAAAAI
-        AAAAAAAAAAAAAAAACIiIiAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///////wP///8D///+A////gP//4Y
-        Dn/8AAQ/+AAAH/gAAA/4AAAP/AAAH/4AAB/gAAABwAAAAYAAAAGAAAABgAAAAYAAAAGAAAAB/AAAH/wA
-        AB/+AAAf/AAAD/gAAA/4AAAf+AAAP/wYDH/+OA7///gP///4D///+A///////w==
-</value>
+  <data name="Guard_addButton.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>X1                     X2                     X3                    X4                    X5</value>
+  </data>
+  <data name="PressuringManager.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
   </data>
   <data name="&gt;&gt;AISwitch_addButton.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <data name="label10.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
   <data name="&gt;&gt;PunishManager.Type" xml:space="preserve">
     <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="InvincibleCounterManager.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>18</value>
   </data>
   <data name="&gt;&gt;groupBox2.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="ReplaceHelper_X4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 25</value>
+  </data>
+  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="&gt;&gt;AISwitch_chooseCmdButton.Name" xml:space="preserve">
     <value>AISwitch_chooseCmdButton</value>
   </data>
-  <data name="&gt;&gt;ReplaceHelper_X4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="PunishManager.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1037, 573</value>
   </data>
-  <data name="&gt;&gt;AISwitchManager.Name" xml:space="preserve">
-    <value>AISwitchManager</value>
+  <data name="ReplaceHelper_X4.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
   </data>
-  <data name="&gt;&gt;ReplaceHelper_X3.Parent" xml:space="preserve">
-    <value>ReplaceHelper</value>
+  <data name="AISwitch_cmdText.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="AtkStorage_defText.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;Mainpage_createButton.Name" xml:space="preserve">
+    <value>Mainpage_createButton</value>
+  </data>
+  <data name="label3.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;MovementManager.Parent" xml:space="preserve">
+    <value>tabControl</value>
+  </data>
+  <data name="ReplaceHelper_V4.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="ReplaceHelper_replaceButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 494</value>
+  </data>
+  <data name="label11.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;Mainpage_chooseDefButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="label8.Text" xml:space="preserve">
-    <value>→</value>
+  <data name="&gt;&gt;Guard_chooseCmdButton.Parent" xml:space="preserve">
+    <value>GuardManager</value>
+  </data>
+  <data name="&gt;&gt;ReplaceHelper_templateText.Name" xml:space="preserve">
+    <value>ReplaceHelper_templateText</value>
+  </data>
+  <data name="&gt;&gt;Guard_chooseStCommonButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;Mainpage_defText.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="AISwitchManager.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
   <data name="&gt;&gt;ReplaceHelper_tempText.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="MainMenu.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="AISwitch_numberUpDownButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 23</value>
+  </data>
+  <data name="ReplaceHelper_X5.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
   </data>
   <data name="&gt;&gt;groupBox2.Parent" xml:space="preserve">
     <value>AISwitchManager</value>
@@ -648,80 +1256,155 @@
   <data name="&gt;&gt;AISwitch_radioButton2.Name" xml:space="preserve">
     <value>AISwitch_radioButton2</value>
   </data>
-  <data name="&gt;&gt;AISwitchManager.Parent" xml:space="preserve">
-    <value>tabControl</value>
-  </data>
   <data name="&gt;&gt;Guard_chooseStCommonButton.Name" xml:space="preserve">
     <value>Guard_chooseStCommonButton</value>
+  </data>
+  <data name="Guard_chooseCmdButton.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="Guard_stCommonText.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="AISwitch_chooseCmdButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="ReplaceHelper_V2.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
   </data>
   <data name="&gt;&gt;Mainpage_chooseDefButton.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;Guard_chooseCmdButton.Parent" xml:space="preserve">
-    <value>GuardManager</value>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 395</value>
   </data>
-  <data name="&gt;&gt;ReplaceHelper_X4.Name" xml:space="preserve">
-    <value>ReplaceHelper_X4</value>
+  <data name="&gt;&gt;ReplaceHelper_tempText.Name" xml:space="preserve">
+    <value>ReplaceHelper_tempText</value>
   </data>
-  <data name="&gt;&gt;AtkStorage_chooseDefButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="label8.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;AISwitchManager.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;NeutralManager.Type" xml:space="preserve">
     <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;PunishManager.ZOrder" xml:space="preserve">
-    <value>4</value>
+  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>347, 25</value>
   </data>
   <data name="&gt;&gt;ReplaceHelper_X5.Parent" xml:space="preserve">
     <value>ReplaceHelper</value>
   </data>
-  <data name="ReplaceHelper_tempText.Text" xml:space="preserve">
-    <value />
+  <data name="GuardManager.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 25</value>
   </data>
   <data name="&gt;&gt;ReplaceHelper_V5.Name" xml:space="preserve">
     <value>ReplaceHelper_V5</value>
   </data>
-  <data name="&gt;&gt;ReplaceHelper_V1.Parent" xml:space="preserve">
-    <value>ReplaceHelper</value>
+  <data name="label5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
   </data>
-  <data name="Mainpage.Text" xml:space="preserve">
-    <value>Mainpage (X)</value>
+  <data name="label7.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
-  <data name="&gt;&gt;Guard_chooseStCommonButton.Parent" xml:space="preserve">
-    <value>GuardManager</value>
-  </data>
-  <data name="&gt;&gt;GuardManager.Parent" xml:space="preserve">
-    <value>tabControl</value>
-  </data>
-  <data name="&gt;&gt;ReplaceHelper_X1.Name" xml:space="preserve">
-    <value>ReplaceHelper_X1</value>
-  </data>
-  <data name="&gt;&gt;ReplaceHelper_V4.Parent" xml:space="preserve">
-    <value>ReplaceHelper</value>
-  </data>
-  <data name="&gt;&gt;tabControl.Name" xml:space="preserve">
-    <value>tabControl</value>
-  </data>
-  <data name="PressuringManager.Text" xml:space="preserve">
-    <value>Pressuring (X)</value>
-  </data>
-  <data name="&gt;&gt;NeutralManager.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;ReplaceHelper_V2.ZOrder" xml:space="preserve">
-    <value>13</value>
+  <data name="PunishManager.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
   </data>
   <data name="&gt;&gt;ComboManager.Name" xml:space="preserve">
     <value>ComboManager</value>
   </data>
+  <data name="&gt;&gt;StuffingManager.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;Guard_chooseStCommonButton.Parent" xml:space="preserve">
+    <value>GuardManager</value>
+  </data>
+  <data name="label9.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;englishToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ReplaceHelper_tempText.Size" type="System.Drawing.Size, System.Drawing">
+    <value>479, 138</value>
+  </data>
+  <data name="&gt;&gt;GuardManager.Parent" xml:space="preserve">
+    <value>tabControl</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>8, 15</value>
+  </data>
+  <data name="ReplaceHelper_X5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 25</value>
+  </data>
+  <data name="AISwitchManager.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;ReplaceHelper_X1.Name" xml:space="preserve">
+    <value>ReplaceHelper_X1</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>541, 9</value>
+  </data>
+  <data name="&gt;&gt;ReplaceHelper_resultText.Parent" xml:space="preserve">
+    <value>ReplaceHelper</value>
+  </data>
+  <data name="label8.Text" xml:space="preserve">
+    <value>→</value>
+  </data>
+  <data name="&gt;&gt;ReplaceHelper_V4.Parent" xml:space="preserve">
+    <value>ReplaceHelper</value>
+  </data>
+  <data name="Guard_cmdText.Size" type="System.Drawing.Size, System.Drawing">
+    <value>823, 26</value>
+  </data>
+  <data name="StuffingManager.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="PressuringManager.Text" xml:space="preserve">
+    <value>Pressuring (X)</value>
+  </data>
+  <data name="ReplaceHelper_V4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="AISwitch_chooseCmdButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>840, 38</value>
+  </data>
+  <data name="&gt;&gt;NeutralManager.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="ReplaceHelper_V5.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="ReplaceHelper_V4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 25</value>
+  </data>
   <data name="&gt;&gt;Guard_chooseCmdButton.Name" xml:space="preserve">
     <value>Guard_chooseCmdButton</value>
+  </data>
+  <data name="ReplaceHelper_replaceButton.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
   </data>
   <data name="&gt;&gt;label12.Parent" xml:space="preserve">
     <value>Mainpage</value>
   </data>
   <data name="Mainpage_checkedList.Items6" xml:space="preserve">
     <value>Neutral</value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 445</value>
+  </data>
+  <data name="ReplaceHelper_tempText.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;languageToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ReplaceHelper_X3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>208, 415</value>
   </data>
   <data name="AISwitchManager.Text" xml:space="preserve">
     <value>AI Switch</value>
@@ -732,35 +1415,62 @@
   <data name="Mainpage_createButton.Text" xml:space="preserve">
     <value>Create AI</value>
   </data>
-  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
-    <value>ReplaceHelper</value>
+  <data name="menuToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 24</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>Choose the DEF file from the character</value>
+  </data>
+  <data name="tabControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 31</value>
   </data>
   <data name="&gt;&gt;AISwitch_addButton.Parent" xml:space="preserve">
     <value>AISwitchManager</value>
   </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>V1                     V2                     V3                    V4                    V5</value>
+  </data>
+  <data name="&gt;&gt;NeutralManager.Parent" xml:space="preserve">
+    <value>tabControl</value>
+  </data>
+  <data name="&gt;&gt;label0.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;ReplaceHelper.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
-  <data name="&gt;&gt;AtkStorage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="AISwitch_addButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="Mainpage_checkedList.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="AtkStorage.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="&gt;&gt;ReplaceHelper_replaceButton.Parent" xml:space="preserve">
+    <value>ReplaceHelper</value>
+  </data>
+  <data name="&gt;&gt;GuardManager.ZOrder" xml:space="preserve">
+    <value>9</value>
   </data>
   <data name="&gt;&gt;InvincibleCounterManager.Name" xml:space="preserve">
     <value>InvincibleCounterManager</value>
   </data>
-  <data name="StuffingManager.Text" xml:space="preserve">
-    <value>Stuffing (X)</value>
+  <data name="AISwitchManager.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 25</value>
   </data>
-  <data name="AISwitch_radioButton1.Text" xml:space="preserve">
-    <value>Always</value>
-  </data>
-  <data name="&gt;&gt;ReplaceHelper_tempText.Name" xml:space="preserve">
-    <value>ReplaceHelper_tempText</value>
+  <data name="Guard_addButton.Text" xml:space="preserve">
+    <value>Add Guard</value>
   </data>
   <data name="groupBox1.Text" xml:space="preserve">
     <value> Choose AI switch type </value>
   </data>
-  <data name="Mainpage_checkedList.Items8" xml:space="preserve">
-    <value>Movement</value>
+  <data name="&gt;&gt;Mainpage.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;englishToolStripMenuItem.Name" xml:space="preserve">
+    <value>englishToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;label2.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -771,10 +1481,16 @@
   <data name="&gt;&gt;label8.Parent" xml:space="preserve">
     <value>ReplaceHelper</value>
   </data>
-  <data name="&gt;&gt;Guard_stCommonText.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="ComboManager.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
   </data>
-  <data name="&gt;&gt;StuffingManager.ZOrder" xml:space="preserve">
+  <data name="AtkStorage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="&gt;&gt;Guard_chooseStCommonButton.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="ComboManager.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
   <data name="&gt;&gt;MainMenu.Type" xml:space="preserve">
@@ -783,44 +1499,62 @@
   <data name="&gt;&gt;AISwitch_comboButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;languageToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="label5.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;label9.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;tabControl.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;GuardManager.Type" xml:space="preserve">
+  <data name="&gt;&gt;AtkStorage.Type" xml:space="preserve">
     <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;AISwitch_comboButton.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="AISwitch_chooseCmdButton.Text" xml:space="preserve">
-    <value>Choose file</value>
+  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 24</value>
+  </data>
+  <data name="label5.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
   </data>
   <data name="groupBox2.Text" xml:space="preserve">
     <value> Choose Variable </value>
   </data>
-  <data name="&gt;&gt;Mainpage_checkedList.Parent" xml:space="preserve">
-    <value>Mainpage</value>
+  <data name="ReplaceHelper_templateText.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 36</value>
   </data>
   <data name="&gt;&gt;StuffingManager.Type" xml:space="preserve">
     <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Guard_addButton.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="ReplaceHelper_X2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 25</value>
   </data>
-  <data name="&gt;&gt;Guard_chooseCmdButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="label12.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="ReplaceHelper_V1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 25</value>
+  </data>
+  <data name="ReplaceHelper_X1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>743, 15</value>
+  </data>
+  <data name="label6.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;AtkStorage.Parent" xml:space="preserve">
+    <value>tabControl</value>
+  </data>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
   </data>
   <data name="ReplaceHelper_X2.Text" xml:space="preserve">
     <value>YY</value>
   </data>
-  <data name="ReplaceHelper.Text" xml:space="preserve">
-    <value>Replace Helper</value>
+  <data name="ReplaceHelper_V2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 25</value>
   </data>
   <data name="&gt;&gt;ReplaceHelper_replaceButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -828,17 +1562,29 @@
   <data name="&gt;&gt;ReplaceHelper_V3.Parent" xml:space="preserve">
     <value>ReplaceHelper</value>
   </data>
-  <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="ReplaceHelper_X3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 25</value>
   </data>
-  <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
-    <value>groupBox1</value>
+  <data name="AISwitch_addButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1019, 260</value>
   </data>
-  <data name="&gt;&gt;ReplaceHelper_replaceButton.Parent" xml:space="preserve">
-    <value>ReplaceHelper</value>
+  <data name="&gt;&gt;ReplaceHelper_tempText.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ReplaceHelper_tempText.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
   </data>
   <data name="&gt;&gt;label0.Name" xml:space="preserve">
     <value>label0</value>
+  </data>
+  <data name="&gt;&gt;ReplaceHelper_V2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Mainpage_checkedList.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="AISwitch_numberUpDownButton.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
   </data>
   <data name="&gt;&gt;Guard_addButton.Name" xml:space="preserve">
     <value>Guard_addButton</value>
@@ -846,20 +1592,29 @@
   <data name="label6.Text" xml:space="preserve">
     <value>Input the CSV file name you want to save to</value>
   </data>
+  <data name="ReplaceHelper_tempText.Location" type="System.Drawing.Point, System.Drawing">
+    <value>547, 415</value>
+  </data>
   <data name="&gt;&gt;label7.Name" xml:space="preserve">
     <value>label7</value>
   </data>
-  <data name="Mainpage_chooseDefButton.Text" xml:space="preserve">
-    <value>Choose file</value>
+  <data name="notExistsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Empty</value>
+  </data>
+  <data name="Mainpage_createButton.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Main</value>
   </data>
-  <data name="&gt;&gt;tabControl.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="ReplaceHelper_V3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 25</value>
   </data>
-  <data name="&gt;&gt;AISwitch_cmdText.Parent" xml:space="preserve">
-    <value>AISwitchManager</value>
+  <data name="MovementManager.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1037, 573</value>
+  </data>
+  <data name="AtkStorage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1037, 573</value>
   </data>
   <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
     <value>6</value>
@@ -873,26 +1628,47 @@
   <data name="ReplaceHelper_X1.Text" xml:space="preserve">
     <value>XX</value>
   </data>
-  <data name="&gt;&gt;ReplaceHelper_V4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;AISwitch_radioButton1.Name" xml:space="preserve">
+    <value>AISwitch_radioButton1</value>
   </data>
   <data name="&gt;&gt;label1.Name" xml:space="preserve">
     <value>label1</value>
   </data>
+  <data name="label0.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="&gt;&gt;PunishManager.Name" xml:space="preserve">
     <value>PunishManager</value>
   </data>
-  <data name="&gt;&gt;AISwitchManager.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="&gt;&gt;StuffingManager.Parent" xml:space="preserve">
+    <value>tabControl</value>
+  </data>
+  <data name="label8.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;AISwitch_cmdText.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
   <data name="&gt;&gt;ReplaceHelper_templateText.Parent" xml:space="preserve">
     <value>ReplaceHelper</value>
   </data>
+  <data name="Guard_stCommonText.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
   <data name="&gt;&gt;groupBox2.Name" xml:space="preserve">
     <value>groupBox2</value>
   </data>
-  <data name="AISwitch_comboButton.Text" xml:space="preserve">
-    <value>var</value>
+  <data name="AISwitch_addButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 306</value>
+  </data>
+  <data name="Mainpage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 25</value>
+  </data>
+  <data name="Guard_addButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="label12.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
   </data>
   <data name="&gt;&gt;label5.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -900,17 +1676,32 @@
   <data name="&gt;&gt;ReplaceHelper.Type" xml:space="preserve">
     <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Mainpage_createButton.Name" xml:space="preserve">
-    <value>Mainpage_createButton</value>
+  <data name="ReplaceHelper_templateText.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="AISwitch_addButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 48pt</value>
+  </data>
+  <data name="ReplaceHelper_resultText.Size" type="System.Drawing.Size, System.Drawing">
+    <value>479, 346</value>
+  </data>
+  <data name="AtkStorage_csvText.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
   </data>
   <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="label3.Text" xml:space="preserve">
-    <value>V1                     V2                     V3                    V4                    V5</value>
+  <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>489, 209</value>
   </data>
-  <data name="&gt;&gt;AISwitch_cmdText.ZOrder" xml:space="preserve">
-    <value>4</value>
+  <data name="&gt;&gt;ReplaceHelper_replaceButton.Name" xml:space="preserve">
+    <value>ReplaceHelper_replaceButton</value>
+  </data>
+  <data name="ReplaceHelper_V3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>208, 464</value>
+  </data>
+  <data name="GuardManager.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1037, 573</value>
   </data>
   <data name="&gt;&gt;AtkStorage_defText.Name" xml:space="preserve">
     <value>AtkStorage_defText</value>
@@ -918,38 +1709,74 @@
   <data name="&gt;&gt;label9.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="ReplaceHelper_V3.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="label6.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
   <data name="&gt;&gt;ReplaceHelper_templateText.ZOrder" xml:space="preserve">
     <value>4</value>
+  </data>
+  <data name="&gt;&gt;ReplaceHelper_V5.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;AtkStorage_createButton.Parent" xml:space="preserve">
+    <value>AtkStorage</value>
+  </data>
+  <data name="&gt;&gt;Guard_chooseCmdButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="AISwitch_comboButton.Items1" xml:space="preserve">
     <value>fvar</value>
   </data>
-  <data name="&gt;&gt;label12.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="Guard_cmdText.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 38</value>
+  </data>
+  <data name="languageToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 24</value>
+  </data>
+  <data name="label10.Text" xml:space="preserve">
+    <value>Choose the CMD file from the character</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
   </data>
   <data name="InvincibleCounterManager.Text" xml:space="preserve">
     <value>Invincible Counter (X)</value>
   </data>
-  <data name="&gt;&gt;languageToolStripMenuItem.Name" xml:space="preserve">
-    <value>languageToolStripMenuItem</value>
+  <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>354, 25</value>
   </data>
   <data name="&gt;&gt;AtkStorage.Name" xml:space="preserve">
     <value>AtkStorage</value>
   </data>
+  <data name="&gt;&gt;label6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="helpToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 24</value>
+  </data>
+  <data name="ReplaceHelper_resultText.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="ReplaceHelper_replaceButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>480, 60</value>
+  </data>
   <data name="&gt;&gt;Guard_cmdText.Name" xml:space="preserve">
     <value>Guard_cmdText</value>
   </data>
-  <data name="&gt;&gt;englishToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="label2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="&gt;&gt;Mainpage.Type" xml:space="preserve">
     <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;ReplaceHelper_tempText.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="ReplaceHelper_templateText.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="MainMenu.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>8, 2, 0, 2</value>
   </data>
   <data name="&gt;&gt;ReplaceHelper_V4.ZOrder" xml:space="preserve">
     <value>6</value>
@@ -957,8 +1784,11 @@
   <data name="&gt;&gt;tabControl.Type" xml:space="preserve">
     <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="ReplaceHelper_replaceButton.Text" xml:space="preserve">
-    <value>Replace</value>
+  <data name="&gt;&gt;Guard_stCommonText.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ReplaceHelper_resultText.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
   <data name="ComboManager.Text" xml:space="preserve">
     <value>Combo (X)</value>
@@ -966,11 +1796,17 @@
   <data name="&gt;&gt;AISwitch_chooseCmdButton.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="&gt;&gt;Mainpage_checkedList.Parent" xml:space="preserve">
+    <value>Mainpage</value>
+  </data>
+  <data name="&gt;&gt;ReplaceHelper.Name" xml:space="preserve">
+    <value>ReplaceHelper</value>
+  </data>
   <data name="&gt;&gt;AtkStorage_defText.Parent" xml:space="preserve">
     <value>AtkStorage</value>
   </data>
-  <data name="&gt;&gt;menuToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;MainMenu.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="&gt;&gt;ReplaceHelper_V1.ZOrder" xml:space="preserve">
     <value>9</value>
@@ -981,17 +1817,35 @@
   <data name="&gt;&gt;label1.Parent" xml:space="preserve">
     <value>ReplaceHelper</value>
   </data>
+  <data name="NeutralManager.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="label10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 12</value>
+  </data>
+  <data name="ReplaceHelper_V5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>408, 464</value>
+  </data>
+  <data name="Guard_chooseStCommonButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="ReplaceHelper_V5.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
   <data name="&gt;&gt;Guard_addButton.Parent" xml:space="preserve">
     <value>GuardManager</value>
   </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="AISwitch_radioButton1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
   </data>
-  <data name="label10.Text" xml:space="preserve">
-    <value>Choose the CMD file from the character</value>
+  <data name="Mainpage_checkedList.Items8" xml:space="preserve">
+    <value>Movement</value>
   </data>
-  <data name="label9.Text" xml:space="preserve">
-    <value>Choose the CMD file from the character</value>
+  <data name="&gt;&gt;ReplaceHelper_V3.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="label5.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="&gt;&gt;AtkStorage_createButton.Name" xml:space="preserve">
     <value>AtkStorage_createButton</value>
@@ -999,35 +1853,65 @@
   <data name="&gt;&gt;simplifiedChineseToolStripMenuItem.Name" xml:space="preserve">
     <value>simplifiedChineseToolStripMenuItem</value>
   </data>
-  <data name="&gt;&gt;ReplaceHelper_X5.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="StuffingManager.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 25</value>
   </data>
-  <data name="AtkStorage_chooseDefButton.Text" xml:space="preserve">
-    <value>Choose file</value>
+  <data name="&gt;&gt;AISwitchManager.Name" xml:space="preserve">
+    <value>AISwitchManager</value>
   </data>
-  <data name="&gt;&gt;englishToolStripMenuItem.Name" xml:space="preserve">
-    <value>englishToolStripMenuItem</value>
+  <data name="Mainpage.Text" xml:space="preserve">
+    <value>Mainpage (X)</value>
   </data>
-  <data name="&gt;&gt;label4.Name" xml:space="preserve">
-    <value>label4</value>
+  <data name="GuardManager.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="label9.Text" xml:space="preserve">
+    <value>Choose the CMD file from the character</value>
   </data>
   <data name="AISwitch_addButton.Text" xml:space="preserve">
     <value>Add AI Switch</value>
   </data>
-  <data name="&gt;&gt;menuToolStripMenuItem.Name" xml:space="preserve">
-    <value>menuToolStripMenuItem</value>
+  <data name="tabControl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
   </data>
-  <data name="label5.Text" xml:space="preserve">
-    <value>Choose the DEF file from the character</value>
+  <data name="ReplaceHelper_V4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>308, 464</value>
+  </data>
+  <data name="ReplaceHelper_X4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="Guard_cmdText.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;AtkStorage_createButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label11.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="AISwitch_comboButton.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Mugen AI Tool</value>
+  </data>
+  <data name="&gt;&gt;ReplaceHelper_X5.Name" xml:space="preserve">
+    <value>ReplaceHelper_X5</value>
   </data>
   <data name="languageToolStripMenuItem.Text" xml:space="preserve">
     <value>Language</value>
   </data>
+  <data name="Mainpage.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="&gt;&gt;ComboManager.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ReplaceHelper_X3.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
   <data name="&gt;&gt;label5.Name" xml:space="preserve">
     <value>label5</value>
-  </data>
-  <data name="&gt;&gt;Guard_chooseStCommonButton.ZOrder" xml:space="preserve">
-    <value>2</value>
   </data>
   <data name="&gt;&gt;ReplaceHelper_V5.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1038,62 +1922,104 @@
   <data name="&gt;&gt;Guard_stCommonText.Parent" xml:space="preserve">
     <value>GuardManager</value>
   </data>
-  <data name="&gt;&gt;AISwitch_radioButton1.Name" xml:space="preserve">
-    <value>AISwitch_radioButton1</value>
+  <data name="&gt;&gt;InvincibleCounterManager.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;AISwitch_radioButton2.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;label0.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;PunishManager.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="Guard_chooseStCommonButton.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="Mainpage_createButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 306</value>
+  </data>
+  <data name="label0.Size" type="System.Drawing.Size, System.Drawing">
+    <value>94, 25</value>
   </data>
   <data name="&gt;&gt;AtkStorage_chooseDefButton.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <data name="&gt;&gt;exitToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="MainMenu.Text" xml:space="preserve">
     <value>MainMenu</value>
   </data>
-  <data name="&gt;&gt;label3.Name" xml:space="preserve">
-    <value>label3</value>
+  <data name="ReplaceHelper_V1.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;GuardManager.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ReplaceHelper_V2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>108, 464</value>
+  </data>
+  <data name="&gt;&gt;label9.Parent" xml:space="preserve">
+    <value>AISwitchManager</value>
   </data>
   <data name="&gt;&gt;AtkStorage_chooseDefButton.Parent" xml:space="preserve">
     <value>AtkStorage</value>
   </data>
-  <data name="&gt;&gt;MainMenu.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="PunishManager.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 25</value>
+  </data>
+  <data name="AtkStorage_createButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 306</value>
   </data>
   <data name="&gt;&gt;Guard_chooseCmdButton.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
+  <data name="&gt;&gt;AISwitchManager.Parent" xml:space="preserve">
+    <value>tabControl</value>
+  </data>
+  <data name="&gt;&gt;notExistsToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;label8.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;ReplaceHelper_tempText.Parent" xml:space="preserve">
-    <value>ReplaceHelper</value>
+  <data name="AISwitch_comboButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 32</value>
+  </data>
+  <data name="&gt;&gt;Mainpage_chooseDefButton.Parent" xml:space="preserve">
+    <value>Mainpage</value>
+  </data>
+  <data name="ReplaceHelper.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;AISwitch_numberUpDownButton.Name" xml:space="preserve">
     <value>AISwitch_numberUpDownButton</value>
   </data>
-  <data name="&gt;&gt;ReplaceHelper_resultText.Parent" xml:space="preserve">
-    <value>ReplaceHelper</value>
+  <data name="AISwitch_radioButton2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>139, 21</value>
   </data>
   <data name="&gt;&gt;ReplaceHelper_resultText.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="&gt;&gt;PressuringManager.Parent" xml:space="preserve">
-    <value>tabControl</value>
+  <data name="label12.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 12</value>
   </data>
-  <data name="&gt;&gt;AtkStorage_csvText.Name" xml:space="preserve">
-    <value>AtkStorage_csvText</value>
+  <data name="&gt;&gt;AtkStorage_chooseDefButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;StuffingManager.Parent" xml:space="preserve">
-    <value>tabControl</value>
+  <data name="label6.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
   </data>
   <data name="label12.Text" xml:space="preserve">
     <value>Choose the DEF file from the character</value>
   </data>
-  <data name="&gt;&gt;ReplaceHelper_templateText.Name" xml:space="preserve">
-    <value>ReplaceHelper_templateText</value>
+  <data name="InvincibleCounterManager.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 25</value>
+  </data>
+  <data name="AtkStorage.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="Guard_addButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1019, 260</value>
   </data>
   <data name="&gt;&gt;ReplaceHelper_X3.Name" xml:space="preserve">
     <value>ReplaceHelper_X3</value>
@@ -1101,819 +2027,91 @@
   <data name="&gt;&gt;GuardManager.Name" xml:space="preserve">
     <value>GuardManager</value>
   </data>
-  <data name="&gt;&gt;Mainpage.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="label10.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
-  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>16</value>
+  <data name="Mainpage_checkedList.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 85</value>
   </data>
-  <data name="&gt;&gt;label6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label9.Name" xml:space="preserve">
-    <value>label9</value>
-  </data>
-  <data name="&gt;&gt;PressuringManager.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;AISwitch_numberUpDownButton.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;label6.Name" xml:space="preserve">
-    <value>label6</value>
-  </data>
-  <data name="notExistsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Empty</value>
-  </data>
-  <data name="&gt;&gt;MainMenu.Name" xml:space="preserve">
-    <value>MainMenu</value>
-  </data>
-  <data name="&gt;&gt;AtkStorage_createButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Mainpage_chooseDefButton.Parent" xml:space="preserve">
-    <value>Mainpage</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>784, 561</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="$this.Localizable" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="AISwitchManager.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="AISwitchManager.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="AISwitchManager.Size" type="System.Drawing.Size, System.Drawing">
-    <value>776, 496</value>
-  </data>
-  <data name="AISwitchManager.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="AISwitch_addButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 48pt</value>
-  </data>
-  <data name="AISwitch_addButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 265</value>
-  </data>
-  <data name="AISwitch_addButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>764, 225</value>
-  </data>
-  <data name="AISwitch_addButton.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="AISwitch_chooseCmdButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>630, 33</value>
-  </data>
-  <data name="AISwitch_chooseCmdButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>140, 23</value>
-  </data>
-  <data name="AISwitch_chooseCmdButton.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="AISwitch_cmdText.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 33</value>
-  </data>
-  <data name="AISwitch_cmdText.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="AISwitch_cmdText.Size" type="System.Drawing.Size, System.Drawing">
-    <value>618, 23</value>
-  </data>
-  <data name="AISwitch_cmdText.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="AISwitch_comboButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt</value>
-  </data>
-  <data name="AISwitch_comboButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 28</value>
+  <data name="AISwitch_radioButton1.Text" xml:space="preserve">
+    <value>Always</value>
   </data>
   <data name="AISwitch_comboButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>58, 21</value>
+    <value>76, 25</value>
   </data>
-  <data name="AISwitch_comboButton.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
+  <data name="&gt;&gt;Mainpage_createButton.Parent" xml:space="preserve">
+    <value>Mainpage</value>
   </data>
-  <data name="AISwitch_numberUpDownButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt</value>
+  <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>831, 156</value>
   </data>
-  <data name="AISwitch_numberUpDownButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>70, 29</value>
+  <data name="Mainpage_createButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
   </data>
-  <data name="AISwitch_numberUpDownButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>58, 20</value>
-  </data>
-  <data name="AISwitch_numberUpDownButton.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="AISwitch_radioButton1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="AISwitch_radioButton1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt</value>
-  </data>
-  <data name="AISwitch_radioButton1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 32</value>
-  </data>
-  <data name="AISwitch_radioButton1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>58, 17</value>
-  </data>
-  <data name="AISwitch_radioButton1.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="AISwitch_radioButton2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="AISwitch_radioButton2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt</value>
-  </data>
-  <data name="AISwitch_radioButton2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>70, 32</value>
-  </data>
-  <data name="AISwitch_radioButton2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>106, 17</value>
-  </data>
-  <data name="AISwitch_radioButton2.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="AtkStorage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="AtkStorage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="AtkStorage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>776, 496</value>
-  </data>
-  <data name="AtkStorage.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="AtkStorage_chooseDefButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>630, 33</value>
-  </data>
-  <data name="AtkStorage_chooseDefButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>140, 23</value>
-  </data>
-  <data name="AtkStorage_chooseDefButton.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="AtkStorage_createButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 48pt</value>
-  </data>
-  <data name="AtkStorage_createButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 265</value>
-  </data>
-  <data name="AtkStorage_createButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>764, 225</value>
-  </data>
-  <data name="AtkStorage_createButton.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="AtkStorage_csvText.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 133</value>
-  </data>
-  <data name="AtkStorage_csvText.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="AtkStorage_csvText.Size" type="System.Drawing.Size, System.Drawing">
-    <value>618, 23</value>
-  </data>
-  <data name="AtkStorage_csvText.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="AtkStorage_defText.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 33</value>
-  </data>
-  <data name="AtkStorage_defText.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="AtkStorage_defText.Size" type="System.Drawing.Size, System.Drawing">
-    <value>618, 23</value>
-  </data>
-  <data name="AtkStorage_defText.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="ComboManager.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="ComboManager.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="ComboManager.Size" type="System.Drawing.Size, System.Drawing">
-    <value>776, 496</value>
-  </data>
-  <data name="ComboManager.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="englishToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>126, 22</value>
-  </data>
-  <data name="exitToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>138, 22</value>
-  </data>
-  <data name="groupBox1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 192</value>
-  </data>
-  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>240, 55</value>
+  <data name="ReplaceHelper_X1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 25</value>
   </data>
   <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
   </data>
-  <data name="groupBox2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>252, 192</value>
-  </data>
-  <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>240, 55</value>
-  </data>
-  <data name="groupBox2.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="GuardManager.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="GuardManager.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="GuardManager.Size" type="System.Drawing.Size, System.Drawing">
-    <value>776, 496</value>
-  </data>
-  <data name="GuardManager.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="Guard_addButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 48pt</value>
-  </data>
-  <data name="Guard_addButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 265</value>
-  </data>
-  <data name="Guard_addButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>764, 225</value>
-  </data>
-  <data name="Guard_addButton.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="Guard_chooseCmdButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>630, 33</value>
-  </data>
-  <data name="Guard_chooseCmdButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>140, 23</value>
-  </data>
-  <data name="Guard_chooseCmdButton.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="Guard_chooseStCommonButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>630, 133</value>
-  </data>
-  <data name="Guard_chooseStCommonButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>140, 23</value>
-  </data>
-  <data name="Guard_chooseStCommonButton.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="Guard_cmdText.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 33</value>
-  </data>
-  <data name="Guard_cmdText.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="Guard_cmdText.Size" type="System.Drawing.Size, System.Drawing">
-    <value>618, 23</value>
-  </data>
-  <data name="Guard_cmdText.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="Guard_stCommonText.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 133</value>
-  </data>
-  <data name="Guard_stCommonText.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="Guard_stCommonText.Size" type="System.Drawing.Size, System.Drawing">
-    <value>618, 23</value>
-  </data>
-  <data name="Guard_stCommonText.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="helpToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 20</value>
-  </data>
-  <data name="InvincibleCounterManager.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="InvincibleCounterManager.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="InvincibleCounterManager.Size" type="System.Drawing.Size, System.Drawing">
-    <value>776, 496</value>
-  </data>
-  <data name="InvincibleCounterManager.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="label0.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label0.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="label0.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 8</value>
-  </data>
-  <data name="label0.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 20</value>
-  </data>
-  <data name="label0.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>406, 8</value>
-  </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 20</value>
-  </data>
-  <data name="label1.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="label10.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label10.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="label10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 10</value>
-  </data>
-  <data name="label10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>289, 20</value>
-  </data>
-  <data name="label10.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="label11.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label11.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="label11.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 110</value>
-  </data>
-  <data name="label11.Size" type="System.Drawing.Size, System.Drawing">
-    <value>333, 20</value>
-  </data>
-  <data name="label11.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="label12.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label12.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="label12.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 10</value>
-  </data>
-  <data name="label12.Size" type="System.Drawing.Size, System.Drawing">
-    <value>286, 20</value>
-  </data>
-  <data name="label12.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 342</value>
-  </data>
-  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>318, 13</value>
-  </data>
-  <data name="label2.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 386</value>
-  </data>
-  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>318, 13</value>
-  </data>
-  <data name="label3.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label4.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>406, 337</value>
-  </data>
-  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>142, 20</value>
-  </data>
-  <data name="label4.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="label5.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label5.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 10</value>
-  </data>
-  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>286, 20</value>
-  </data>
-  <data name="label5.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="label6.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label6.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 110</value>
-  </data>
-  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>318, 20</value>
-  </data>
-  <data name="label6.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="label7.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label7.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 11.25pt</value>
-  </data>
-  <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>623, 135</value>
-  </data>
-  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 18</value>
-  </data>
-  <data name="label7.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="label8.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>367, 181</value>
-  </data>
-  <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>18, 13</value>
-  </data>
-  <data name="label8.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
-  </data>
-  <data name="label9.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label9.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="label9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 10</value>
-  </data>
-  <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>289, 20</value>
-  </data>
-  <data name="label9.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="languageToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 20</value>
-  </data>
   <data name="MainMenu.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
-  <data name="MainMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>784, 24</value>
+  <data name="Mainpage_checkedList.Items3" xml:space="preserve">
+    <value>Stuffing</value>
   </data>
-  <data name="MainMenu.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="MainMenu.TrayLocation" type="System.Drawing.Point, System.Drawing">
-    <value>17, 17</value>
-  </data>
-  <data name="Mainpage.AutoScroll" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="ReplaceHelper_V5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 25</value>
   </data>
   <data name="Mainpage.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="Mainpage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
+  <data name="label12.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="Mainpage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>776, 496</value>
+  <data name="&gt;&gt;label6.Name" xml:space="preserve">
+    <value>label6</value>
   </data>
-  <data name="Mainpage.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
+  <data name="AISwitch_numberUpDownButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
   </data>
-  <data name="Mainpage_checkedList.ColumnWidth" type="System.Int32, mscorlib">
-    <value>250</value>
+  <data name="&gt;&gt;tabControl.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
-  <data name="Mainpage_checkedList.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
+  <data name="label0.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
-  <data name="Mainpage_checkedList.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 74</value>
+  <data name="label4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
-  <data name="Mainpage_checkedList.Size" type="System.Drawing.Size, System.Drawing">
-    <value>764, 67</value>
-  </data>
-  <data name="Mainpage_checkedList.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="Mainpage_chooseDefButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>630, 33</value>
-  </data>
-  <data name="Mainpage_chooseDefButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>140, 23</value>
-  </data>
-  <data name="Mainpage_chooseDefButton.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="Mainpage_createButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 48pt</value>
-  </data>
-  <data name="Mainpage_createButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 265</value>
-  </data>
-  <data name="Mainpage_createButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>764, 225</value>
-  </data>
-  <data name="Mainpage_createButton.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="Mainpage_defText.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 33</value>
+  <data name="label6.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
   </data>
   <data name="Mainpage_defText.Multiline" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="Mainpage_defText.Size" type="System.Drawing.Size, System.Drawing">
-    <value>618, 23</value>
-  </data>
-  <data name="Mainpage_defText.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="menuToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 20</value>
-  </data>
-  <data name="MovementManager.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="MovementManager.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="MovementManager.Size" type="System.Drawing.Size, System.Drawing">
-    <value>776, 496</value>
-  </data>
-  <data name="MovementManager.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="NeutralManager.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="NeutralManager.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="NeutralManager.Size" type="System.Drawing.Size, System.Drawing">
-    <value>776, 496</value>
-  </data>
-  <data name="NeutralManager.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="notExistsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>108, 22</value>
-  </data>
-  <data name="PressuringManager.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="PressuringManager.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="PressuringManager.Size" type="System.Drawing.Size, System.Drawing">
-    <value>776, 496</value>
-  </data>
-  <data name="PressuringManager.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="PunishManager.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="PunishManager.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="PunishManager.Size" type="System.Drawing.Size, System.Drawing">
-    <value>776, 496</value>
-  </data>
-  <data name="PunishManager.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="ReplaceHelper.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="ReplaceHelper.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="ReplaceHelper.Size" type="System.Drawing.Size, System.Drawing">
-    <value>776, 496</value>
-  </data>
-  <data name="ReplaceHelper.TabIndex" type="System.Int32, mscorlib">
+  <data name="AtkStorage_createButton.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="ReplaceHelper_replaceButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 21.75pt</value>
-  </data>
-  <data name="ReplaceHelper_replaceButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 428</value>
-  </data>
-  <data name="ReplaceHelper_replaceButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>360, 52</value>
-  </data>
-  <data name="ReplaceHelper_replaceButton.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="ReplaceHelper_resultText.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="ReplaceHelper_resultText.Location" type="System.Drawing.Point, System.Drawing">
-    <value>410, 31</value>
-  </data>
-  <data name="ReplaceHelper_resultText.Size" type="System.Drawing.Size, System.Drawing">
-    <value>360, 300</value>
-  </data>
-  <data name="ReplaceHelper_resultText.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="ReplaceHelper_templateText.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="ReplaceHelper_templateText.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 31</value>
   </data>
   <data name="ReplaceHelper_templateText.Size" type="System.Drawing.Size, System.Drawing">
-    <value>360, 300</value>
+    <value>479, 346</value>
   </data>
-  <data name="ReplaceHelper_templateText.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="&gt;&gt;ReplaceHelper_X5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="ReplaceHelper_tempText.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="&gt;&gt;Guard_cmdText.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label4.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
-  <data name="ReplaceHelper_tempText.Location" type="System.Drawing.Point, System.Drawing">
-    <value>410, 360</value>
+  <data name="GuardManager.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
   </data>
-  <data name="ReplaceHelper_tempText.Size" type="System.Drawing.Size, System.Drawing">
-    <value>360, 120</value>
-  </data>
-  <data name="ReplaceHelper_tempText.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="ReplaceHelper_V1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 402</value>
-  </data>
-  <data name="ReplaceHelper_V1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 20</value>
-  </data>
-  <data name="ReplaceHelper_V1.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="ReplaceHelper_V2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>81, 402</value>
-  </data>
-  <data name="ReplaceHelper_V2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 20</value>
-  </data>
-  <data name="ReplaceHelper_V2.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="ReplaceHelper_V3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>156, 402</value>
-  </data>
-  <data name="ReplaceHelper_V3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 20</value>
-  </data>
-  <data name="ReplaceHelper_V3.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="ReplaceHelper_V4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>231, 402</value>
-  </data>
-  <data name="ReplaceHelper_V4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 20</value>
-  </data>
-  <data name="ReplaceHelper_V4.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="ReplaceHelper_V5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>306, 402</value>
-  </data>
-  <data name="ReplaceHelper_V5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 20</value>
-  </data>
-  <data name="ReplaceHelper_V5.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="ReplaceHelper_X1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 360</value>
-  </data>
-  <data name="ReplaceHelper_X1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 20</value>
-  </data>
-  <data name="ReplaceHelper_X1.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="ReplaceHelper_X2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>81, 360</value>
-  </data>
-  <data name="ReplaceHelper_X2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 20</value>
-  </data>
-  <data name="ReplaceHelper_X2.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="ReplaceHelper_X3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>156, 360</value>
-  </data>
-  <data name="ReplaceHelper_X3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 20</value>
-  </data>
-  <data name="ReplaceHelper_X3.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="ReplaceHelper_X4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>231, 360</value>
-  </data>
-  <data name="ReplaceHelper_X4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 20</value>
-  </data>
-  <data name="ReplaceHelper_X4.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="ReplaceHelper_X5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>306, 360</value>
-  </data>
-  <data name="ReplaceHelper_X5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 20</value>
-  </data>
-  <data name="ReplaceHelper_X5.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="simplifiedChineseToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>126, 22</value>
-  </data>
-  <data name="StuffingManager.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="StuffingManager.Size" type="System.Drawing.Size, System.Drawing">
-    <value>776, 496</value>
-  </data>
-  <data name="StuffingManager.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="tabControl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 27</value>
-  </data>
-  <data name="tabControl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>784, 522</value>
-  </data>
-  <data name="tabControl.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="MainMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>
